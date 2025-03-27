@@ -267,7 +267,6 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
-    padding-bottom: 10px; /* Prevent content from being cut off */
 }
 
 .scroll-row {
@@ -280,7 +279,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     text-align: center;
     width:293px;
     height:363px;
-    padding:55px 30px 60px;
+    padding:55px 30px 55px;
     border-radius: 3px;
     border: 1px solid #dadfe9;
     -webkit-transition: .3s linear; 
