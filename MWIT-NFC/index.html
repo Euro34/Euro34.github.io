@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const accessKey = urlParams.get("access_key");
+        if (accessKey == null){
+            window.location.href = "/Home";
+        }
+
+        const accessMap = {
+            "Prair": 0,
+            "Kie": 1,
+            "Nampang": 2,
+            "Tonkhaw": 3,
+            "Praew": 4,
+            "Yok": 5,
+            "Saiparn": 6,
+            "Toongkow": 8,
+            "Copter": 12,
+            "Por": 13,
+            "Tin": 14,
+            "Karnplu": 15,
+            "Kiki": 18,
+            "Tonkla": 24
+        };
+
+        const id = accessMap[accessKey];
+
+        if (id === undefined) {
+            window.location.href = "/Home";
+        }
+
+
+        name = accessKey;
+    </script>
+
+    <head>
+        <!-- meta data -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <!--font-family-->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
+        
+        <!-- title of site -->
+        <title>Euro's Farewell</title>
+
+        <!-- For favicon png -->
+        <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.ico"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="assets/Logo/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/Logo/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/Logo/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        
+        <!--font-awesome.min.css-->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+        <!--linear icon css-->
+		<!--<link rel="stylesheet" href="assets/css/linearicons.css">-->
+
+        <!--flaticon.css-->
+		<link rel="stylesheet" href="assets/css/flaticon.css">
+
+		<!--animate.css-->
+        <link rel="stylesheet" href="assets/css/animate.css">
+
+        <!--owl.carousel.css-->
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+		
+        <!--bootstrap.min.css-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+		<!-- bootsnav -->
+		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
+        
+        <!--style.css-->
+        <link rel="stylesheet" href="assets/css/style.css">
+        
+        <!--responsive.css-->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		
+        <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+	
+	<body>
+		<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+	
+		<!--welcome-hero start -->
+		<section id="home" class="welcome-hero">
+
+			<!-- top-area Start -->
+			<div class="top-area">
+				<div class="header-area">
+					<!-- Start Navigation -->
+				    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+
+				        <div class="container">
+
+				            <!-- Start Header Navigation -->
+				            <div class="navbar-header">
+				                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+				                    <i class="fa fa-bars"></i>
+				                </button>
+				                <a class="navbar-brand" href="index.html">Euro's Farewell<span></span></a>
+
+				            </div><!--/.navbar-header-->
+				            <!-- End Header Navigation -->
+
+				            <!-- Collect the nav links, forms, and other content for toggling -->
+				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+				                    <li class=" scroll active"><a href="#home">home</a></li>
+				                    <li class="scroll"><a href="#service">photo gallery</a></li>
+				                    <li class="scroll"><a href="#contact">contact</a></li>
+				                </ul><!--/.nav -->
+				            </div><!-- /.navbar-collapse -->
+				        </div><!--/.container-->
+				    </nav><!--/nav-->
+				    <!-- End Navigation -->
+				</div><!--/.header-area-->
+			    <div class="clearfix"></div>
+
+			</div><!-- /.top-area-->
+			<!-- top-area End -->
+
+			<div class="container">
+				<div class="welcome-hero-txt">
+					<h2>Hi! <script> document.write(name); </script></h2>
+					<p id = "long-message"></p>
+					<button class="welcome-btn" id="special-vid">Special Video</button>
+				</div>
+			</div>
+
+		</section><!--/.welcome-hero-->
+		<!--welcome-hero end -->
+
+		<section id="service" class="service">
+            <div class="container">
+                <div class="service-content">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <a href="https://mwittd-my.sharepoint.com/:f:/g/personal/s6508640_ms_mwit_ac_th/EhE4_QGSI4xDgys1bTG_bXQB01luokRPRFeuQU38lQap0A">
+                                <div class="single-service-item">
+                                    <div class="single-service-icon">
+                                        <img src="assets/images/service/one drive.png">
+                                    </div>
+                                    <h2>Euro's Onedrive</h2>
+                                    <p>Euro's MWIT picture storage</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </section>
+        
+
+		<!--contact start-->
+		<footer id="contact"  class="contact">
+			<div class="container">
+				<div class="footer-top">
+					<div class="row">
+						<div class="col-md-3 col-sm-6">
+							<div class="single-footer-widget">
+								<div class="footer-logo">
+									<a href="/Home/index.html">Euro</a>
+								</div>
+								<p>
+                                    I wish you all the best. It was nice knowing you.
+                                    <br>
+                                    <em>
+                                        <b>
+                                            Until we meet again!
+                                        </b>
+                                    </em>
+								</p>
+								<div class="footer-contact">
+									<p>
+                                        euroeuro230550@gmail.com
+                                        <br>
+                                        +66 (0)82 752 6082
+                                    </p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-6">
+							<div class="single-footer-widget">
+								<h2><b>Contact</b></h2>
+								<ul>
+                                    <li><a href="https://www.facebook.com/euro.papangkorn"><i class="fa fa-facebook"></i><span> :  Euro Ppk</span></a></li>
+                                    <li><a href="https://www.instagram.com/euro__ppk/"><i class="fa fa-instagram"></i><span> :  euro__ppk</span></a></li>
+                                    <li><a href="https://www.linkedin.com/in/papangkorn-pongkapanakrai-3058012b7/"><i class="fa fa-linkedin"></i> <span> :  Papangkorn Pongkapanakrai</span></a></li>
+                                    <li><a href="https://line.me/ti/p/_csD5iT4g9"><img src="assets/images/Contact/line.png" width="13" height="13"> <span> :  euro.id.line</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-copyright">
+					<div class="row">
+						<div class="col-sm-6">
+							<p>
+                                Thank you! For everything
+                            </p>
+						</div>
+					</div>
+				</div><!--/.footer-copyright-->
+			</div><!--/.container-->
+
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+			
+        </footer><!--/.contact-->
+		<!--contact end-->
+
+
+		
+		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+		<script src="assets/js/jquery.js"></script>
+        
+        <!--modernizr.min.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		
+		<!--bootstrap.min.js-->
+        <script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- bootsnav js -->
+		<script src="assets/js/bootsnav.js"></script>
+
+		<!--owl.carousel.js-->
+        <script src="assets/js/owl.carousel.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+        <!--Custom JS-->
+        <script src="assets/js/custom.js"></script>
+        
+    </body>
+
+    <script>
+        var messageContainer = document.getElementById("long-message");
+        var redirectButton = document.getElementById("special-vid");
+
+        switch (id) {
+            case 0:
+                messageContainer.innerHTML = "Hello, User 0! Welcome to your dashboard.";
+                redirectButton.onclick = function() {
+                window.location.href = "https://example.com/user1-dashboard"; // Redirect to User 1's dashboard
+                };
+                break;
+            case 1:
+                messageContainer.innerHTML = "Hello, User 1! Welcome to your dashboard.";
+                break;
+            case 2:
+                messageContainer.innerHTML = "Hello, User 2! Welcome to your dashboard.";
+                break;
+            case 3:
+                messageContainer.innerHTML = "Hello, User 3! Welcome to your dashboard.";
+                break;
+            case 4:
+                messageContainer.innerHTML = "Hello, User 4! Welcome to your dashboard.";
+                break;
+            case 5:
+                messageContainer.innerHTML = "Hello, User 5! Welcome to your dashboard.";
+                break;
+            case 6:
+                messageContainer.innerHTML = "Hello, User 6! Welcome to your dashboard.";
+                break;
+            case 8:
+                messageContainer.innerHTML = "Hello, User 8! Welcome to your dashboard.";
+                break;
+            case 12:
+                messageContainer.innerHTML = "Hello, User 12! Welcome to your dashboard.";
+                break;
+            case 13:
+                messageContainer.innerHTML = "Hello, User 13! Welcome to your dashboard.";
+                break;
+            case 14:
+                messageContainer.innerHTML = "Hello, User 14! Welcome to your dashboard.";
+                break;
+            case 15:
+                messageContainer.innerHTML = "Hello, User 15! Welcome to your dashboard.";
+                break;
+            case 18:
+                messageContainer.innerHTML = "Hello, User 18! Welcome to your dashboard.";
+                break;
+            case 24:
+                messageContainer.innerHTML = "Hello, User 24! Welcome to your dashboard.";
+                break;
+        }
+    </script>
+</html>
