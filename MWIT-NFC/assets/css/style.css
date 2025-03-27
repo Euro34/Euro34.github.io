@@ -133,7 +133,7 @@ nav.navbar.bootsnav {
     background-color: transparent;
     border-bottom: transparent;
 }
-.wrap-sticky nav.navbar.bootsnav.sticked {background-color: #000;box-shadow: 0 2px 5px rgba(0,0,0,.2);}
+.wrap-sticky nav.navbar.bootsnav.sticked {background-color: #000000b0;box-shadow: 0 2px 5px rgba(0,0,0,.2);}
 
 /*.navbar-brand*/
 .navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus{
@@ -259,109 +259,62 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 /*.welcome-hero-txt*/
 
 /*-------------------------------------
-        4. Model-Search
---------------------------------------*/
-.model-search-content .col-sm-12 {padding: 0;}
-.model-search-content {
-    padding: 40px 0;
-    background: #fff;
-    box-shadow:0 10px 40px 0px rgba(38,40,64,.2);
-    position: absolute;
-    bottom: -150px;
-    width: 100%;
-    border-radius: 3px;
-}
-
-/*.single-model-search*/
-.single-model-search{margin-bottom: 30px;}
-.single-model-search:last-child {margin-bottom: 0;}
-
-.single-model-search h2 {
-    font-size: 16px;
-    font-weight: 400;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-}
-/*model-select-icon*/
-.model-select-icon{
-    position:relative;
-}
-.model-select-icon .form-control {
-    outline: 0!important;
-    box-shadow: none;
-    border: 1px solid #f8f8f8;
-    background: #f8f8f8;
-    height: 60px;
-}
-.model-select-icon select {
-    font-size: 16px;
-    color: #888f9d;
-    text-transform: capitalize;
-}
-.model-select-icon:after{
-    position: absolute;
-    content: "\f103";
-    right: 0px;
-    top: 0;
-    font-size: 10px;
-    color: #888f9d;
-    background: #f8f8f8;
-    height: 60px;
-    line-height: 60px;
-    width: 50px;
-    text-align: center;
-    font-family: "Flaticon";
-    pointer-events: none;
-    border: transparent;
-}/*model-select-icon*/
-.welcome-btn.model-search-btn {
-    width: 160px;
-    margin-top: 80px;
-    margin-left: 53px;
-}
-
-/*.single-model-search*/
-
-/*-------------------------------------
         5. Service 
 --------------------------------------*/
-.service { padding: 40px 0 40px;}
+.service {padding: 20px 0 20px;}
+
+.service-content{
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+    padding-bottom: 10px; /* Prevent content from being cut off */
+}
+
+.scroll-row {
+    display: flex; /* Make columns flex items */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
 
 .single-service-item{
+    position: relative;
     text-align: center;
+    width:293px;
+    height:363px;
     padding:55px 30px 60px;
     border-radius: 3px;
-    margin-bottom: 30px;
     border: 1px solid #dadfe9;
     -webkit-transition: .3s linear; 
     -moz-transition:.3s linear; 
     -ms-transition:.3s linear; 
     -o-transition:.3s linear;
     transition: .3s linear;
+    white-space: normal;
 }
 
 .single-service-icon {
     display: inline-block;
     color: #50616c;
+    width:96px;
+    height:auto;
 }
-.single-service-item h2 a {
+.single-service-item h2 {
     font-size:20px;
     margin: 35px 0 20px;
 }
 .single-service-item h2 a span {text-transform:  lowercase;}
-.single-service-item p {padding-bottom: 35px;text-transform: initial;position: relative;}
+.single-service-item p {text-transform: initial;}
 .single-service-item p:before {
     position: absolute;
     content: "";
     width: 20px;
     height: 3px;
     background: #3030ea;
-    bottom: 0;
+    bottom: 50px;
     left: 50%;
     margin-left: -10px;
 }
 
-.single-service-icon [class^="flaticon-"]:before,.single-service-icon[class*=" flaticon-"]:before,.single-service-icon [class^="flaticon-"]:after,.single-service-icon [class*=" flaticon-"]:after {font-size:60px;}
+
 .single-service-item:hover .single-service-icon [class^="flaticon-"]:before,.single-service-item:hover .single-service-icon [class*=" flaticon-"]:before,.single-service-item:hover .single-service-icon [class^="flaticon-"]:after,.single-service-item:hover .single-service-icon [class*=" flaticon-"]:after {color:#fff;}
 
 

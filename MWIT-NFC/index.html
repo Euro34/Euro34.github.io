@@ -38,7 +38,7 @@
         <!-- meta data -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
         <!--font-family-->
@@ -124,7 +124,7 @@
 				            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 				                    <li class=" scroll active"><a href="#home">home</a></li>
-				                    <li class="scroll"><a href="#service">photo gallery</a></li>
+				                    <li class="scroll"><a href="#service">service</a></li>
 				                    <li class="scroll"><a href="#contact">contact</a></li>
 				                </ul><!--/.nav -->
 				            </div><!-- /.navbar-collapse -->
@@ -151,7 +151,7 @@
 		<section id="service" class="service">
             <div class="container">
                 <div class="service-content">
-                    <div class="row">
+                    <div class="row scroll-row">
                         <div class="col-md-4 col-sm-6">
                             <a href="https://mwittd-my.sharepoint.com/:f:/g/personal/s6508640_ms_mwit_ac_th/EhE4_QGSI4xDgys1bTG_bXQB01luokRPRFeuQU38lQap0A">
                                 <div class="single-service-item">
@@ -163,6 +163,30 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="col-md-4 col-sm-6">
+                            <a onclick="alert('Not Available Yet')">
+                                <div class="single-service-item">
+                                    <div class="single-service-icon">
+                                        <img src="assets/images/service/Video.webp">
+                                    </div>
+                                    <h2>Prom Video</h2>
+                                    <p>
+                                        Video regarding 32.3
+                                    </p>
+                                </div>
+                            </a>
+						</div>
+                        <div class="col-md-4 col-sm-6">
+                            <a>
+                                <div class="single-service-item">
+                                    <div class="single-service-icon">
+                                        <img src="assets/images/service/Speaker.png">
+                                    </div>
+                                    <h2>Friendship Readout</h2>
+                                    <p>I will read the friendship that I have written for you</p>
+                                </div>
+                            </a>
+						</div>
                     </div>
                 </div>
             </div><!--/.container-->
@@ -204,7 +228,7 @@
                                     <li><a href="https://www.facebook.com/euro.papangkorn"><i class="fa fa-facebook"></i><span> :  Euro Ppk</span></a></li>
                                     <li><a href="https://www.instagram.com/euro__ppk/"><i class="fa fa-instagram"></i><span> :  euro__ppk</span></a></li>
                                     <li><a href="https://www.linkedin.com/in/papangkorn-pongkapanakrai-3058012b7/"><i class="fa fa-linkedin"></i> <span> :  Papangkorn Pongkapanakrai</span></a></li>
-                                    <li><a href="https://line.me/ti/p/_csD5iT4g9"><img src="assets/images/Contact/line.png" width="13" height="13"> <span> :  euro.id.line</span></a></li>
+                                    <li><a href="https://line.me/ti/p/_csD5iT4g9"><img src="assets/images/contact/line.png" width="13" height="13"> <span> :  euro.id.line</span></a></li>
 								</ul>
 							</div>
 						</div>
@@ -260,51 +284,79 @@
         var messageContainer = document.getElementById("long-message");
         var redirectButton = document.getElementById("special-vid");
 
+        function Prom_click() {
+            if (id == 0){
+                alert("Not for you");
+            }
+            else {
+                alert("Not Available Yet");
+            }
+        }
+        redirectButton.onclick = function() {
+            if (special_vid_url==""){
+                alert("Video not available yet")
+            }
+            else {
+                window.location.href = special_vid_url;
+            }
+        };
+
         switch (id) {
             case 0:
-                messageContainer.innerHTML = "Hello, User 0! Welcome to your dashboard.";
-                redirectButton.onclick = function() {
-                window.location.href = "https://example.com/user1-dashboard"; // Redirect to User 1's dashboard
-                };
+                messageContainer.innerHTML = "Hello, User 0! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 1:
-                messageContainer.innerHTML = "Hello, User 1! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 1! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 2:
-                messageContainer.innerHTML = "Hello, User 2! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 2! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 3:
-                messageContainer.innerHTML = "Hello, User 3! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 3! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 4:
-                messageContainer.innerHTML = "Hello, User 4! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 4! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 5:
-                messageContainer.innerHTML = "Hello, User 5! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 5! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 6:
-                messageContainer.innerHTML = "Hello, User 6! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 6! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 8:
-                messageContainer.innerHTML = "Hello, User 8! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 8! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 12:
-                messageContainer.innerHTML = "Hello, User 12! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 12! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 13:
-                messageContainer.innerHTML = "Hello, User 13! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 13! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 14:
-                messageContainer.innerHTML = "Hello, User 14! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 14! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 15:
-                messageContainer.innerHTML = "Hello, User 15! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 15! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 18:
-                messageContainer.innerHTML = "Hello, User 18! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 18! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
             case 24:
-                messageContainer.innerHTML = "Hello, User 24! Welcome to your dashboard.";
+                messageContainer.innerHTML = "Hello, User 24! Welcome to your farewell.";
+                special_vid_url = "";
                 break;
         }
     </script>
