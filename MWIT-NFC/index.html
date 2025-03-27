@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
     <script>
+        //Get accessKey
+        const urlParams = new URLSearchParams(window.location.search);
+        const accessKey = urlParams.get("access_key") || "Unknown";
+
+        //Logdata
         fetch("https://api64.ipify.org?format=json")
             .then(response => response.json())
             .then(data => {
                 const ip = data.ip;
-                const urlParams = new URLSearchParams(window.location.search);
-                const accessKey = urlParams.get("access_key") || "Unknown";
                 const userAgent = navigator.userAgent;
       
                 fetch("https://script.google.com/macros/s/AKfycbytDsFKt1gChAJjAHHxmqYLOIWr3IZJc_OCNZ0rDM9KxZTvjJ3tEgvcTdihIruyrETx/exec?access_key=" + accessKey + "&ip=" + ip + "&ua=" + encodeURIComponent(userAgent))
                     .then(response => console.log("Logged Access Key:", accessKey, "IP:", ip))
                     .catch(error => console.error("Logging failed", error));
         });
-    </script>
-      
-    <script>
+
+        //Redirect
         if (accessKey == null){
             window.location.href = "/Home";
         }
@@ -42,9 +44,6 @@
         if (id === undefined) {
             window.location.href = "/Home";
         }
-
-
-        name = accessKey;
     </script>
 
     <head>
@@ -152,7 +151,7 @@
 
 			<div class="container">
 				<div class="welcome-hero-txt">
-					<h2>Hi! <script> document.write(name); </script></h2>
+					<h2>Hi! <script> document.write(accessKey); </script></h2>
 					<p id = "long-message"></p>
 					<button class="welcome-btn" id="special-vid">Special Video</button>
 				</div>
