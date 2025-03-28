@@ -44,6 +44,65 @@
         if (id === undefined) {
             window.location.href = "/Home";
         }
+
+        switch (id) {
+            case 0:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 1:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 2:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 3:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 4:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 5:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 6:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 8:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 12:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 13:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 14:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 15:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 18:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+            case 24:
+                special_vid_url = "";
+                readout_url = "";
+                break;
+        }
     </script>
 
     <head>
@@ -152,8 +211,8 @@
 			<div class="container">
 				<div class="welcome-hero-txt">
 					<h2>Hi! <script> document.write(accessKey); </script></h2>
-					<p id = "long-message"></p>
-					<button class="welcome-btn" id="special-vid">Special Video</button>
+					<p id = "long-message">Hello, User <script> document.write(id)</script>! Welcome to your farewell.</p>
+					<button class="welcome-btn" onclick=Special_click()>Special Video</button>
 				</div>
 			</div>
 
@@ -189,7 +248,7 @@
                             </a>
 						</div>
                         <div class="col-md-4 col-sm-6">
-                            <a>
+                            <a onclick=Readout_click()>
                                 <div class="single-service-item">
                                     <div class="single-service-icon">
                                         <img src="assets/images/service/Speaker.png">
@@ -293,8 +352,14 @@
     </body>
 
     <script>
-        var messageContainer = document.getElementById("long-message");
-        var redirectButton = document.getElementById("special-vid");
+        function Special_click() {
+            if (special_vid_url==""){
+                alert("Available soon")
+            }
+            else {
+                window.location.href = special_vid_url;
+            }
+        };
 
         function Prom_click() {
             if (id == 0){
@@ -302,74 +367,17 @@
             }
             else {
                 alert("Not Available Yet");
+                //window.location.href = [URL]
             }
         }
-        redirectButton.onclick = function() {
-            if (special_vid_url==""){
-                alert("Video not available yet")
+
+        function Readout_click() {
+            if (readout_url==""){
+                alert("Available soon")
             }
             else {
-                window.location.href = special_vid_url;
+                window.location.href = readout_url;
             }
         };
-
-        switch (id) {
-            case 0:
-                messageContainer.innerHTML = "Hello, User 0! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 1:
-                messageContainer.innerHTML = "Hello, User 1! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 2:
-                messageContainer.innerHTML = "Hello, User 2! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 3:
-                messageContainer.innerHTML = "Hello, User 3! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 4:
-                messageContainer.innerHTML = "Hello, User 4! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 5:
-                messageContainer.innerHTML = "Hello, User 5! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 6:
-                messageContainer.innerHTML = "Hello, User 6! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 8:
-                messageContainer.innerHTML = "Hello, User 8! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 12:
-                messageContainer.innerHTML = "Hello, User 12! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 13:
-                messageContainer.innerHTML = "Hello, User 13! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 14:
-                messageContainer.innerHTML = "Hello, User 14! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 15:
-                messageContainer.innerHTML = "Hello, User 15! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 18:
-                messageContainer.innerHTML = "Hello, User 18! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-            case 24:
-                messageContainer.innerHTML = "Hello, User 24! Welcome to your farewell.";
-                special_vid_url = "";
-                break;
-        }
     </script>
 </html>
