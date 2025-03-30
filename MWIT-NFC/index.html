@@ -17,12 +17,8 @@
                     .catch(error => console.error("Logging failed", error));
         });
 
-        //Redirect
-        if (accessKey == null){
-            window.location.href = "/Home";
-        }
-
         const accessMap = {
+            "Euro":-1,
             "Prair": 0,
             "Kie": 1,
             "Nampang": 2,
