@@ -4,14 +4,18 @@
         //http://localhost:8000/MWIT-NFC/?access_key=Euro
         //https://euro34.github.io/MWIT-NFC/?access_key=Euro
         const urlParams = new URLSearchParams(window.location.search);
-        const name = urlParams.get("access_key") || "Unknown";
+        const name = urlParams.get("access_key");
+
+        if (name == null){
+            window.location.href = "/Home";
+        }
 
         fetch("assets/data.json")
             .then(response => response.json())
             .then(data => {
                 id = data[name]["id"];
-                readout_url = data[name]["readout_url"];
-                special_vid_url = data[name]["special_vid_url"];
+                readout_url = data[name]["readout"];
+                special_vid_url = data[name]["special_vid"];
 
                 message = document.getElementById("greet-message");
                 message.textContent = "Hello, User " + id + "! Welcome to your farewell."
@@ -201,7 +205,7 @@
 						<div class="col-md-3 col-sm-6">
 							<div class="single-footer-widget">
 								<div class="footer-logo">
-									<a onclick=download_contact()>Euro</a>
+									<a href="assets/Contact/Papangkorn Pongkapanakrai.vcf" download="Euro's Contact.vcf">Euro</a>
 								</div>
 								<p>
                                     I wish you all the best. It was nice knowing you.
@@ -283,7 +287,7 @@
     <script>
         function Special_click(){
             console.log(special_vid_url);
-            if (special_vid_url===""){
+            if (special_vid_url==""){
                 alert("Available soon(around 2-7 days from prom)");
             }
             else {
@@ -308,12 +312,5 @@
                 window.location.href = readout_url;
             }
         };
-        
-        function download_contact(){
-            const link = document.createElement("a");
-            link.href = "assets/Contact/Papangkorn Pongkapanakrai.vcf";
-            link.download = "Euro's Contact.vcf";
-            link.click();
-        }
     </script>
 </html>
