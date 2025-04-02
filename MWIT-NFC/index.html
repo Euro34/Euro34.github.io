@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html>
     <script>
-        //Get accessKey
+        //http://localhost:8000/MWIT-NFC/?access_key=Euro
+        //https://euro34.github.io/MWIT-NFC/?access_key=Euro
         const urlParams = new URLSearchParams(window.location.search);
-        const accessKey = urlParams.get("access_key") || "Unknown";
+        const name = urlParams.get("access_key") || "Unknown";
+
+        fetch("assets/data.json")
+            .then(response => response.json())
+            .then(data => {
+                id = data[name]["id"];
+                readout_url = data[name]["readout_url"];
+                special_vid_url = data[name]["special_vid_url"];
+
+                message = document.getElementById("greet-message");
+                message.textContent = "Hello, User " + id + "! Welcome to your farewell."
+        })
+            .catch(error => console.error("Error:", error));
 
         //Logdata
         fetch("https://api64.ipify.org?format=json")
@@ -12,93 +25,13 @@
                 const ip = data.ip;
                 const userAgent = navigator.userAgent;
       
-                fetch("https://script.google.com/macros/s/AKfycbytDsFKt1gChAJjAHHxmqYLOIWr3IZJc_OCNZ0rDM9KxZTvjJ3tEgvcTdihIruyrETx/exec?access_key=" + accessKey + "&ip=" + ip + "&ua=" + encodeURIComponent(userAgent))
-                    .then(response => console.log("Logged Access Key:", accessKey, "IP:", ip))
-                    .catch(error => console.error("Logging failed", error));
+                if (name != "Euro") {
+                    fetch("https://script.google.com/macros/s/AKfycbytDsFKt1gChAJjAHHxmqYLOIWr3IZJc_OCNZ0rDM9KxZTvjJ3tEgvcTdihIruyrETx/exec?access_key=" + name + "&ip=" + ip + "&ua=" + encodeURIComponent(userAgent))
+                        .then(response => console.log("Logged Access Key:", name, "IP:", ip))
+                        .catch(error => console.error("Logging failed", error));
+                }
         });
 
-        const accessMap = {
-            "Euro":-1,
-            "Prair": 0,
-            "Kie": 1,
-            "Nampang": 2,
-            "Tonkhaw": 3,
-            "Praew": 4,
-            "Yok": 5,
-            "Saiparn": 6,
-            "Toongkow": 8,
-            "Copter": 12,
-            "Por": 13,
-            "Tin": 14,
-            "Karnplu": 15,
-            "Kiki": 18,
-            "Tonkla": 24
-        };
-
-        const id = accessMap[accessKey];
-
-        if (id === undefined) {
-            window.location.href = "/Home";
-        }
-
-        switch (id) {
-            case 0:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 1:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 2:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 3:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 4:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 5:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 6:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 8:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 12:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 13:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 14:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 15:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 18:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-            case 24:
-                special_vid_url = "";
-                readout_url = "";
-                break;
-        }
     </script>
 
     <head>
@@ -121,7 +54,7 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="../assets/Logo/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/Logo/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/Logo/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
+        <link rel="manifest" href="../assets/Logo/site.webmanifest">
         
         <!--font-awesome.min.css-->
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -206,8 +139,8 @@
 
 			<div class="container">
 				<div class="welcome-hero-txt">
-					<h2>Hi! <script> document.write(accessKey); </script></h2>
-					<p id = "long-message">Hello, User <script> document.write(id)</script>! Welcome to your farewell.</p>
+					<h2>Hi! <script> document.write(name); </script></h2>
+					<p id = "greet-message">Hello, User ! Welcome to your farewell.</p>
 					<button class="welcome-btn" onclick=Special_click()>Special Video</button>
 				</div>
 			</div>
@@ -268,7 +201,7 @@
 						<div class="col-md-3 col-sm-6">
 							<div class="single-footer-widget">
 								<div class="footer-logo">
-									<a href="/Home/index.html">Euro</a>
+									<a onclick=download_contact()>Euro</a>
 								</div>
 								<p>
                                     I wish you all the best. It was nice knowing you.
@@ -348,8 +281,9 @@
     </body>
 
     <script>
-        function Special_click() {
-            if (special_vid_url==""){
+        function Special_click(){
+            console.log(special_vid_url);
+            if (special_vid_url===""){
                 alert("Available soon(around 2-7 days from prom)");
             }
             else {
@@ -357,16 +291,16 @@
             }
         };
 
-        function Prom_click() {
+        function Prom_click(){
             if (id == 0){
-                alert("Not for you");
+                alert("Sorry, this isn't for you");
             }
             else {
                 window.location.href = "https://youtu.be/6lu2lgMZRzI?si=PjG6zdDj_SlFXmvz";
             }
         }
 
-        function Readout_click() {
+        function Readout_click(){
             if (readout_url==""){
                 alert("Available soon");
             }
@@ -374,5 +308,12 @@
                 window.location.href = readout_url;
             }
         };
+        
+        function download_contact(){
+            const link = document.createElement("a");
+            link.href = "assets/Contact/Papangkorn Pongkapanakrai.vcf";
+            link.download = "Euro's Contact.vcf";
+            link.click();
+        }
     </script>
 </html>
