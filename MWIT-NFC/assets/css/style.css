@@ -476,4 +476,30 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
+
+/*===============================
+    Video player
+===============================*/
+#audio-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* Style for the overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
 /*========================Thank you=================

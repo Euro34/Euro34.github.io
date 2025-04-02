@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
     <script>
-        //http://localhost:8000/MWIT-NFC/?access_key=Euro
+        //http://localhost:8000/
         //https://euro34.github.io/MWIT-NFC/?access_key=Euro
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get("access_key");
 
-        if (name == null){
-            window.location.href = "/Home";
-        }
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("assets/data.json")
+                .then(response => response.json())
+                .then(data => {
+                    if (!(name in data)) {
+                        window.location.href = "/Portfolio";
+                        return;
+                    }
 
-        fetch("assets/data.json")
-            .then(response => response.json())
-            .then(data => {
-                id = data[name]["id"];
-                readout_url = data[name]["readout"];
-                special_vid_url = data[name]["special_vid"];
+                    id = data[name]["id"];
+                    readout = data[name]["readout"];
+                    special_vid_url = data[name]["special_vid"];
 
-                message = document.getElementById("greet-message");
-                message.textContent = "Hello, User " + id + "! Welcome to your farewell."
-        })
-            .catch(error => console.error("Error:", error));
+                    message = document.getElementById("greet-message");
+                    message.textContent = "Hello, User " + id + "! Welcome to your farewell.";
+
+                    document.getElementById('audio-player').src = readout;
+                })
+                .catch(error => console.error("Error:", error));
+            });
 
         //Logdata
         fetch("https://api64.ipify.org?format=json")
@@ -99,6 +104,15 @@
     </head>
 	
 	<body>
+        <!-- audio player -->
+        <div id="overlay" onclick="closeAudioPlayer()"></div>
+        <div id="audio-popup">
+            <audio id="audio-player" controls autoplay>
+                <source type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
 		<!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -305,12 +319,18 @@
         }
 
         function Readout_click(){
-            if (readout_url==""){
+            if (readout==""){
                 alert("Available soon");
             }
             else {
-                window.location.href = readout_url;
+                document.getElementById('audio-popup').style.display = 'block';
+                document.getElementById('overlay').style.display = 'block';
             }
         };
+
+        function closeAudioPlayer() {
+            document.getElementById('audio-popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
     </script>
 </html>
