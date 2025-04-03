@@ -1,7 +1,7 @@
 {
-    "Euro": { "id": -1, "special_vid": "https://drive.google.com/file/d/1eqxL9VNY2xwg_Veiv4Xoq6V2L-Vq45ST/view?usp=share_link", "readout": "assets/audio/FS-Readout/Kie.m4a" },
+    "Euro": { "id": -1, "special_vid": "assets/video/32.3 v2.3.mov", "readout": "assets/audio/FS-Readout/Kie.m4a" },
     "Prair": { "id": 0, "special_vid": "", "readout": "" },
-    "Kie": { "id": 1, "special_vid": "", "readout": "" },
+    "Kie": { "id": 1, "special_vid": "", "readout": "assets/audio/FS-Readout/Kie.m4a" },
     "Nampang": { "id": 2, "special_vid": "", "readout": "" },
     "Tonkhaw": { "id": 3, "special_vid": "", "readout": "" },
     "Praew": { "id": 4, "special_vid": "", "readout": "" },

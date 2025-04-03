@@ -478,7 +478,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 }
 
 /*===============================
-    Video player
+    Audio & Video player
 ===============================*/
 #audio-popup {
     display: none;
@@ -490,8 +490,29 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     z-index: 1000;
 }
 
+#audio-player {
+    width: 80vw;
+    height: 40px; 
+}
+
+#video-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 1000;
+    height: auto;
+}
+
+#video-player {
+    width: 80vw;
+    height: auto; 
+}
+
 /* Style for the overlay */
-#overlay {
+.overlay {
     display: none;
     position: fixed;
     top: 0;

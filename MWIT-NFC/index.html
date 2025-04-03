@@ -17,12 +17,13 @@
 
                     id = data[name]["id"];
                     readout = data[name]["readout"];
-                    special_vid_url = data[name]["special_vid"];
+                    special_vid = data[name]["special_vid"];
 
                     message = document.getElementById("greet-message");
                     message.textContent = "Hello, User " + id + "! Welcome to your farewell.";
 
                     document.getElementById('audio-player').src = readout;
+                    document.getElementById('video-player').src = special_vid;
                 })
                 .catch(error => console.error("Error:", error));
             });
@@ -105,12 +106,21 @@
 	
 	<body>
         <!-- audio player -->
-        <div id="overlay" onclick="closeAudioPlayer()"></div>
+        <div class="overlay" id="audio-overlay" onclick="closeAudioPlayer()"></div>
         <div id="audio-popup">
-            <audio id="audio-player" controls autoplay>
-                <source type="audio/mp3">
+            <audio id="audio-player" controls>
+                <source>
                 Your browser does not support the audio element.
             </audio>
+        </div>
+
+        <!-- video player -->
+        <div class="overlay" id="video-overlay" onclick="closeVideoPlayer()"></div>
+        <div id="video-popup">
+            <video id="video-player" controls>
+                <source>
+                Your browser does not support the video element.
+            </video>
         </div>
 
 		<!--[if lte IE 9]>
@@ -300,12 +310,15 @@
 
     <script>
         function Special_click(){
-            console.log(special_vid_url);
-            if (special_vid_url==""){
+            console.log(special_vid);
+            if (special_vid==""){
                 alert("Available soon(around 2-7 days from prom)");
             }
             else {
-                window.location.href = special_vid_url;
+                // window.location.href = special_vid;
+                document.getElementById('video-popup').style.display = 'block';
+                document.getElementById('video-overlay').style.display = 'block';
+                document.getElementById('video-player').play();
             }
         };
 
@@ -324,13 +337,27 @@
             }
             else {
                 document.getElementById('audio-popup').style.display = 'block';
-                document.getElementById('overlay').style.display = 'block';
+                document.getElementById('audio-overlay').style.display = 'block';
+                document.getElementById('audio-player').play();
             }
         };
 
         function closeAudioPlayer() {
+            document.getElementById('audio-overlay').style.display = 'none';
             document.getElementById('audio-popup').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
+            sound = document.getElementById('audio-player');
+
+            sound.pause();
+            sound.currentTime = 0;
+        }
+
+        function closeVideoPlayer() {
+            document.getElementById('video-overlay').style.display = 'none';
+            document.getElementById('video-popup').style.display = 'none';
+            video = document.getElementById('video-player');
+
+            video.pause();
+            video.currentTime = 0;
         }
     </script>
 </html>
