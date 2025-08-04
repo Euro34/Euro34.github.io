@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <script>
-        //http://localhost:8000/
+        //http://localhost:8000/MWIT-NFC/?access_key=Euro
         //https://euro34.github.io/MWIT-NFC/?access_key=Euro
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get("access_key");
@@ -17,13 +17,12 @@
 
                     id = data[name]["id"];
                     readout = data[name]["readout"];
-                    special_vid = data[name]["special_vid"];
+                    photos_path = data[name]["photos"]
 
                     message = document.getElementById("greet-message");
                     message.textContent = "Hello, User " + id + "! Welcome to your farewell.";
 
                     document.getElementById('audio-player').src = readout;
-                    document.getElementById('video-player').src = special_vid;
                 })
                 .catch(error => console.error("Error:", error));
             });
@@ -114,13 +113,14 @@
             </audio>
         </div>
 
-        <!-- video player -->
-        <div class="overlay" id="video-overlay" onclick="closeVideoPlayer()"></div>
-        <div id="video-popup">
-            <video id="video-player" controls>
-                <source>
-                Your browser does not support the video element.
-            </video>
+        <!-- image player -->
+        <div class="overlay" id="image-overlay" onclick="closeModal()"></div>
+        <div id="mediaModal">
+            <div class="swiper">
+                <div class="swiper-wrapper" id="carouselContent">
+                <!-- Slides will be injected here -->
+                </div>
+            </div>
         </div>
 
 		<!--[if lte IE 9]>
@@ -169,7 +169,7 @@
 				<div class="welcome-hero-txt">
 					<h2>Hi! <script> document.write(name); </script></h2>
 					<p id = "greet-message">Hello, User ! Welcome to your farewell.</p>
-					<button class="welcome-btn" onclick=Special_click()>Special Video</button>
+					<button class="welcome-btn" onclick=Photos_click()>Special Photos</button>
 				</div>
 			</div>
 
@@ -242,6 +242,7 @@
 								</p>
 								<div class="footer-contact">
 									<p>
+                                        euro.ppk@gmail.com
                                         euroeuro230550@gmail.com
                                         <br>
                                         +66 (0)82 752 6082
@@ -305,23 +306,13 @@
 
         <!--Custom JS-->
         <script src="assets/js/custom.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/js/carousel.js"></script>
         
     </body>
 
     <script>
-        function Special_click(){
-            console.log(special_vid);
-            if (special_vid==""){
-                alert("Available soon(around 7++ days from prom)");
-            }
-            else {
-                // window.location.href = special_vid;
-                document.getElementById('video-popup').style.display = 'block';
-                document.getElementById('video-overlay').style.display = 'block';
-                document.getElementById('video-player').play();
-            }
-        };
-
         function Prom_click(){
             if (id == 0){
                 alert("Sorry, this isn't for you");
@@ -349,15 +340,6 @@
 
             sound.pause();
             sound.currentTime = 0;
-        }
-
-        function closeVideoPlayer() {
-            document.getElementById('video-overlay').style.display = 'none';
-            document.getElementById('video-popup').style.display = 'none';
-            video = document.getElementById('video-player');
-
-            video.pause();
-            video.currentTime = 0;
         }
     </script>
 </html>
