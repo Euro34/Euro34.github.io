@@ -26,6 +26,7 @@
 	.wrap-sticky nav.navbar.bootsnav.sticked ul.nav > li > a {padding: 18px 0px;}
 	nav.navbar.bootsnav .navbar-brand {padding: 25px;}
 	nav.navbar.bootsnav ul.nav > li > a {padding: 15px 0px;border: transparent;}
+	#mediaModal {width: 100vw;}
 }/*max-width:992px*/
 
 @media screen and (max-width:991px){

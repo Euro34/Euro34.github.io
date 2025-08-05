@@ -34,7 +34,7 @@ function Photos_click() {
             swiper = new Swiper('.swiper', {
                 loop: true,
                 autoplay: {
-                    delay: 4000,
+                    delay: 3000,
                 },
                 slidesPerView: 1,
                 centeredSlides: true,
@@ -42,6 +42,8 @@ function Photos_click() {
             });
         })
         .catch(error => {
+            document.getElementById('image-overlay').style.display = 'none';
+            document.getElementById("mediaModal").classList.remove("active");
             alert("Wait until you receive the friendship");
         });
 }

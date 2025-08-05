@@ -1,17 +1,17 @@
 {
-    "Euro": { "id": -1, "photos": "assets/photos/Kie1.json", "readout": "assets/audio/FS-Readout/Kie.m4a" },
+    "Euro": { "id": -1, "photos": "assets/photos/Tonkhaw.json", "readout": "assets/audio/FS-Readout/Kie.m4a" },
     "Prair": { "id": 0, "photos": "assets/photos/Prair.json", "readout": "" },
     "Kie": { "id": 1, "photos": "assets/photos/Kie.json", "readout": "assets/audio/FS-Readout/Kie.m4a" },
     "Nampang": { "id": 2, "photos": "assets/photos/Nampang.json", "readout": "" },
-    "Tonkhaw": { "id": 3, "photos": "assets/photos/Tonkhaw.json", "readout": "" },
+    "Tonkhaw": { "id": 3, "photos": "assets/photos/Tonkhaw.json", "readout": "assets/audio/FS-Readout/Tonkhaw.m4a" },
     "Praew": { "id": 4, "photos": "assets/photos/Praew.json", "readout": "" },
-    "Yok": { "id": 5, "photos": "assets/photos/Yok.json", "readout": "" },
+    "Yok": { "id": 5, "photos": "assets/photos/Yok.json", "readout": "assets/audio/FS-Readout/Yok.m4a" },
     "Saiparn": { "id": 6, "photos": "assets/photos/Saiparn.json", "readout": "" },
     "Toongkow": { "id": 8, "photos": "assets/photos/Toongkow.json", "readout": "" },
     "Copter": { "id": 12, "photos": "assets/photos/Copter.json", "readout": "" },
     "Por": { "id": 13, "photos": "assets/photos/Por.json", "readout": "" },
     "Tin": { "id": 14, "photos": "assets/photos/Tin.json", "readout": "" },
     "Karnplu": { "id": 15, "photos": "assets/photos/Karnplu.json", "readout": "" },
-    "Kiki": { "id": 18, "photos": "assets/photos/Kiki.json", "readout": "" },
+    "Kiki": { "id": 18, "photos": "assets/photos/Kiki.json", "readout": "assets/audio/FS-Readout/Kiki.m4a" },
     "Tonkla": { "id": 24, "photos": "assets/photos/Tonkla.json", "readout": "" }
 }
