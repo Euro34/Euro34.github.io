@@ -40,6 +40,9 @@ function Photos_click() {
                 centeredSlides: true,
                 speed: 800,
             });
+        })
+        .catch(error => {
+            alert("Wait until you receive the friendship");
         });
 }
 

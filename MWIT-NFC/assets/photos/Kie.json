@@ -1,11 +1,27 @@
 [
   {
     "type": "video",
-    "src": "assets/photos/Kie/627f6493500c4828a9af748276bc548a.mov"
+    "src": "assets/photos/Kie/1.mov"
   },
   {
     "type": "image",
-    "src": "assets/photos/Kie/DSC00636.JPG"
+    "src": "assets/photos/Kie/2.jpeg"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/3.jpeg"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/L1020997.JPG"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/IMG_7860.jpeg"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/IMG_3109.jpeg"
   },
   {
     "type": "image",
@@ -13,7 +29,39 @@
   },
   {
     "type": "image",
-    "src": "assets/photos/Kie/DSC00649.JPG"
+    "src": "assets/photos/Kie/EUR07843.JPG"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/IMG_5974.JPG"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/EUR07646.JPG"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/EUR09050.JPG"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/IMG_7854.jpeg"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/IMG_7859.jpeg"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/IMG_1944.JPG"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/PB230545.JPG"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/PB230543.JPG"
   },
   {
     "type": "image",
@@ -29,39 +77,31 @@
   },
   {
     "type": "image",
+    "src": "assets/photos/Kie/L1030018.JPG"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/IMG_4278.jpeg"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/IMG_7862.jpeg"
+  },
+  {
+    "type": "image",
     "src": "assets/photos/Kie/EUR07158.JPG"
   },
   {
     "type": "image",
-    "src": "assets/photos/Kie/EUR07636.JPG"
+    "src": "assets/photos/Kie/IMG_3108.jpeg"
   },
   {
     "type": "image",
-    "src": "assets/photos/Kie/EUR07644.JPG"
+    "src": "assets/photos/Kie/IMG_3915.jpeg"
   },
   {
     "type": "image",
-    "src": "assets/photos/Kie/EUR07646.JPG"
-  },
-  {
-    "type": "image",
-    "src": "assets/photos/Kie/EUR07843.JPG"
-  },
-  {
-    "type": "image",
-    "src": "assets/photos/Kie/EUR09050.JPG"
-  },
-  {
-    "type": "image",
-    "src": "assets/photos/Kie/IMG_1944.JPG"
-  },
-  {
-    "type": "image",
-    "src": "assets/photos/Kie/IMG_4228.JPG"
-  },
-  {
-    "type": "image",
-    "src": "assets/photos/Kie/IMG_5974.JPG"
+    "src": "assets/photos/Kie/DSC00649.JPG"
   },
   {
     "type": "image",
@@ -73,15 +113,19 @@
   },
   {
     "type": "image",
-    "src": "assets/photos/Kie/Kie 2.jpeg"
+    "src": "assets/photos/Kie/PB060123.JPG"
   },
   {
     "type": "image",
-    "src": "assets/photos/Kie/Kie.jpeg"
+    "src": "assets/photos/Kie/IMG_4228.JPG"
   },
   {
     "type": "image",
-    "src": "assets/photos/Kie/L1020997.JPG"
+    "src": "assets/photos/Kie/DSC00636.JPG"
+  },
+  {
+    "type": "image",
+    "src": "assets/photos/Kie/IMG_7861.jpeg"
   },
   {
     "type": "image",
@@ -89,18 +133,6 @@
   },
   {
     "type": "image",
-    "src": "assets/photos/Kie/L1030018.JPG"
-  },
-  {
-    "type": "image",
-    "src": "assets/photos/Kie/PB060123.JPG"
-  },
-  {
-    "type": "image",
-    "src": "assets/photos/Kie/PB230543.JPG"
-  },
-  {
-    "type": "image",
-    "src": "assets/photos/Kie/PB230545.JPG"
+    "src": "assets/photos/Kie/EUR07636.JPG"
   }
 ]

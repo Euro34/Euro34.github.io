@@ -1,5 +1,5 @@
 {
-    "Euro": { "id": -1, "photos": "assets/photos/Kie.json", "readout": "assets/audio/FS-Readout/Kie.m4a" },
+    "Euro": { "id": -1, "photos": "assets/photos/Kie1.json", "readout": "assets/audio/FS-Readout/Kie.m4a" },
     "Prair": { "id": 0, "photos": "assets/photos/Prair.json", "readout": "" },
     "Kie": { "id": 1, "photos": "assets/photos/Kie.json", "readout": "assets/audio/FS-Readout/Kie.m4a" },
     "Nampang": { "id": 2, "photos": "assets/photos/Nampang.json", "readout": "" },
