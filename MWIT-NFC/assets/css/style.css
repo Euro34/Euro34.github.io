@@ -257,6 +257,10 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 --------------------------------------*/
 .service {padding: 20px 0 20px;}
 
+.container {
+    width: 80vw;
+}
+
 .service-content{
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping */
