@@ -32,19 +32,19 @@
                 .catch(error => console.error("Error:", error));
             });
 
-        //Logdata
-        // fetch("https://api64.ipify.org?format=json")
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         const ip = data.ip;
-        //         const userAgent = navigator.userAgent;
+        Logdata
+        fetch("https://api64.ipify.org?format=json")
+            .then(response => response.json())
+            .then(data => {
+                const ip = data.ip;
+                const userAgent = navigator.userAgent;
       
-        //         if (name != "Euro") {
-        //             fetch("https://script.google.com/macros/s/AKfycbytDsFKt1gChAJjAHHxmqYLOIWr3IZJc_OCNZ0rDM9KxZTvjJ3tEgvcTdihIruyrETx/exec?access_key=" + name + "&ip=" + ip + "&ua=" + encodeURIComponent(userAgent))
-        //                 .then(response => console.log("Logged Access Key:", name, "IP:", ip))
-        //                 .catch(error => console.error("Logging failed", error));
-        //         }
-        // });
+                if (name != "Euro") {
+                    fetch("https://script.google.com/macros/s/AKfycbytDsFKt1gChAJjAHHxmqYLOIWr3IZJc_OCNZ0rDM9KxZTvjJ3tEgvcTdihIruyrETx/exec?access_key=" + name + "&ip=" + ip + "&ua=" + encodeURIComponent(userAgent))
+                        .then(response => console.log("Logged Access Key:", name, "IP:", ip))
+                        .catch(error => console.error("Logging failed", error));
+                }
+        });
 
     </script>
 
