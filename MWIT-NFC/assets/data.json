@@ -1,17 +1,17 @@
 {
-    "Euro": { "id": -1, "photos": "assets/photos/Saiparn.json", "readout": "assets/audio/FS-Readout/Saiparn.m4a", "photos_link": "https://drive.google.com/drive/folders/18LOA02Ij3wYmnH3pJKWG0km3B1s_IWlV?usp=share_link" },
+    "Euro": { "id": -1, "photos": "assets/photos/Kie.json", "readout": "assets/audio/FS-Readout/Saiparn.m4a", "photos_link": "https://drive.google.com/drive/folders/1WUccAGILESLtgTsqzOPeJTFRs41folut?usp=share_link" },
     "Prair": { "id": 0, "photos": "assets/photos/Prair.json", "readout": "", "photos_link": "" },
     "Kie": { "id": 1, "photos": "assets/photos/Kie.json", "readout": "assets/audio/FS-Readout/Kie.m4a", "photos_link": "https://drive.google.com/drive/folders/1HTNM8klPBSEfrbvS8q_Qxgd736T-yPjf?usp=share_link" },
-    "Nampang": { "id": 2, "photos": "assets/photos/Nampang.json", "readout": "", "photos_link": "" },
+    "Nampang": { "id": 2, "photos": "assets/photos/Nampang.json", "readout": "assets/audio/FS-Readout/Nampangs.m4a", "photos_link": "https://drive.google.com/drive/folders/1WUccAGILESLtgTsqzOPeJTFRs41folut?usp=share_link" },
     "Tonkhaw": { "id": 3, "photos": "assets/photos/Tonkhaw.json", "readout": "assets/audio/FS-Readout/Tonkhaw.m4a", "photos_link": "https://drive.google.com/drive/folders/1XSyedTjSIMdeGX4-QznHHW1CTWZ-zUQX?usp=share_link" },
-    "Praew": { "id": 4, "photos": "assets/photos/Praew.json", "readout": "", "photos_link": "" },
+    "Praew": { "id": 4, "photos": "assets/photos/Praew.json", "readout": "assets/audio/FS-Readout/Praew.m4a", "photos_link": "https://drive.google.com/drive/folders/1g1ycgF6d8BKg6KfYQaiPpjxp6mmwYftj?usp=share_link" },
     "Yok": { "id": 5, "photos": "assets/photos/Yok.json", "readout": "assets/audio/FS-Readout/Yok.m4a", "photos_link": "https://drive.google.com/drive/folders/1PTUVEkjGwiWqGkEMf3TMMDbc0Fh8AoDf?usp=share_link" },
     "Saiparn": { "id": 6, "photos": "assets/photos/Saiparn.json", "readout": "assets/audio/FS-Readout/Saiparn.m4a", "photos_link": "https://drive.google.com/drive/folders/18LOA02Ij3wYmnH3pJKWG0km3B1s_IWlV?usp=share_link" },
-    "Toongkow": { "id": 8, "photos": "assets/photos/Toongkow.json", "readout": "", "photos_link": "" },
-    "Copter": { "id": 12, "photos": "assets/photos/Copter.json", "readout": "", "photos_link": "" },
-    "Por": { "id": 13, "photos": "assets/photos/Por.json", "readout": "", "photos_link": "" },
-    "Tin": { "id": 14, "photos": "assets/photos/Tin.json", "readout": "", "photos_link": "" },
-    "Karnplu": { "id": 15, "photos": "assets/photos/Karnplu.json", "readout": "", "photos_link": "" },
+    "Toongkow": { "id": 8, "photos": "assets/photos/Toongkow.json", "readout": "", "photos_link": "https://drive.google.com/drive/folders/1jw07txCWvxzsULLexRrej75Gmcv5BMG7?usp=sharing" },
+    "Copter": { "id": 12, "photos": "assets/photos/Copter.json", "readout": "", "photos_link": "https://drive.google.com/drive/folders/1_N_G-OGI0Lk-MDSzeDcRPYx1P-4ovqp1?usp=sharing" },
+    "Por": { "id": 13, "photos": "assets/photos/Por.json", "readout": "", "photos_link": "https://drive.google.com/drive/folders/1N_q0TUsJcJslkg5YnwQ58zbfgDWjrxGc?usp=share_link" },
+    "Tin": { "id": 14, "photos": "assets/photos/Tin.json", "readout": "", "photos_link": "https://drive.google.com/drive/folders/1qlbhP8klIFcxuiYCg0eFun8MXZaOSnS1?usp=share_link" },
+    "Karnplu": { "id": 15, "photos": "assets/photos/Karnplu.json", "readout": "", "photos_link": "https://drive.google.com/drive/folders/1Gw_GSlwmUo0lyavQmYQSxZ65V5xNXKqS?usp=share_link" },
     "Kiki": { "id": 18, "photos": "assets/photos/Kiki.json", "readout": "assets/audio/FS-Readout/Kiki.m4a", "photos_link": "https://drive.google.com/drive/folders/1j3j6ClM3v_yF1FzwijTLGMMDDUVNBFsP?usp=sharing" },
-    "Tonkla": { "id": 24, "photos": "assets/photos/Tonkla.json", "readout": "", "photos_link": "" }
+    "Tonkla": { "id": 24, "photos": "assets/photos/Tonkla.json", "readout": "", "photos_link": "https://drive.google.com/drive/folders/1s4wHKJXXBVOFSxVBc7UNSuL71QGfZH7r?usp=share_link" }
 }

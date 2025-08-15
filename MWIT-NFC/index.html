@@ -4,10 +4,9 @@
         //http://localhost:8000/MWIT-NFC/?access_key=Euro
         //https://euro34.github.io/MWIT-NFC/?access_key=Euro
 
-        //Finish: Yok Tonkhaw Kiki Kie
-        //OK Temp: Toongkow Tonkla Praew Karnplu
-        //A bit more: Tin Prair Por Copter
-        //A lot more: Saiparn Nampang
+        //Finish: Yok Tonkhaw Saiparn Kiki Kie Nampang Praew
+        //Readout: Tin Por Toongkow Tonkla Karnplu Copter
+        //OK: Prair
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get("access_key");
 
@@ -34,18 +33,18 @@
             });
 
         //Logdata
-        fetch("https://api64.ipify.org?format=json")
-            .then(response => response.json())
-            .then(data => {
-                const ip = data.ip;
-                const userAgent = navigator.userAgent;
+        // fetch("https://api64.ipify.org?format=json")
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         const ip = data.ip;
+        //         const userAgent = navigator.userAgent;
       
-                if (name != "Euro") {
-                    fetch("https://script.google.com/macros/s/AKfycbytDsFKt1gChAJjAHHxmqYLOIWr3IZJc_OCNZ0rDM9KxZTvjJ3tEgvcTdihIruyrETx/exec?access_key=" + name + "&ip=" + ip + "&ua=" + encodeURIComponent(userAgent))
-                        .then(response => console.log("Logged Access Key:", name, "IP:", ip))
-                        .catch(error => console.error("Logging failed", error));
-                }
-        });
+        //         if (name != "Euro") {
+        //             fetch("https://script.google.com/macros/s/AKfycbytDsFKt1gChAJjAHHxmqYLOIWr3IZJc_OCNZ0rDM9KxZTvjJ3tEgvcTdihIruyrETx/exec?access_key=" + name + "&ip=" + ip + "&ua=" + encodeURIComponent(userAgent))
+        //                 .then(response => console.log("Logged Access Key:", name, "IP:", ip))
+        //                 .catch(error => console.error("Logging failed", error));
+        //         }
+        // });
 
     </script>
 
@@ -217,7 +216,7 @@
                                         <img src="assets/images/service/Speaker.png">
                                     </div>
                                     <h2>Friendship Readout</h2>
-                                    <p>I will read the friendship that I have written for you</p>
+                                    <p>I will read the message that I have written for you</p>
                                 </div>
                             </a>
 						</div>
