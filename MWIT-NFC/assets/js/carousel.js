@@ -1,6 +1,7 @@
 let swiper = null;
 
 function Photos_click() {
+    logAction("Special Photos Clicked");
     document.getElementById('image-overlay').style.display = 'block';
     document.getElementById("mediaModal").classList.add("active");
 

@@ -1,6 +1,6 @@
 {
-    "Euro": { "id": -1, "photos": "assets/photos/Prair.json", "readout": "", "photos_link": "https://drive.google.com/drive/folders/1Hva_joXsMpI-jc1Am7kN6QtRSpxKpzhY?usp=share_link" },
-    "Prair": { "id": 0, "photos": "assets/photos/Prair.json", "readout": "", "photos_link": "https://drive.google.com/drive/folders/1Hva_joXsMpI-jc1Am7kN6QtRSpxKpzhY?usp=share_link" },
+    "Euro": { "id": -1, "photos": "assets/photos/Prair.json", "readout": "assets/audio/FS-Readout/Prair.m4a", "photos_link": "https://drive.google.com/drive/folders/1Hva_joXsMpI-jc1Am7kN6QtRSpxKpzhY?usp=share_link" },
+    "Prair": { "id": 0, "photos": "assets/photos/Prair.json", "readout": "assets/audio/FS-Readout/Prair.m4a", "photos_link": "https://drive.google.com/drive/folders/1Hva_joXsMpI-jc1Am7kN6QtRSpxKpzhY?usp=share_link" },
     "Kie": { "id": 1, "photos": "assets/photos/Kie.json", "readout": "assets/audio/FS-Readout/Kie.m4a", "photos_link": "https://drive.google.com/drive/folders/1HTNM8klPBSEfrbvS8q_Qxgd736T-yPjf?usp=share_link" },
     "Nampang": { "id": 2, "photos": "assets/photos/Nampang.json", "readout": "assets/audio/FS-Readout/Nampangs.m4a", "photos_link": "https://drive.google.com/drive/folders/1WUccAGILESLtgTsqzOPeJTFRs41folut?usp=share_link" },
     "Tonkhaw": { "id": 3, "photos": "assets/photos/Tonkhaw.json", "readout": "assets/audio/FS-Readout/Tonkhaw.m4a", "photos_link": "https://drive.google.com/drive/folders/1XSyedTjSIMdeGX4-QznHHW1CTWZ-zUQX?usp=share_link" },

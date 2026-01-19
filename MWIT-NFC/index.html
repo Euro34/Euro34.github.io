@@ -30,19 +30,52 @@
             });
 
         // Logdata
-        fetch("https://api64.ipify.org?format=json")
-            .then(response => response.json())
-            .then(data => {
-                const ip = data.ip;
-                const userAgent = navigator.userAgent;
-      
-                if (name != "Euro") {
-                    fetch("https://script.google.com/macros/s/AKfycbytDsFKt1gChAJjAHHxmqYLOIWr3IZJc_OCNZ0rDM9KxZTvjJ3tEgvcTdihIruyrETx/exec?access_key=" + name + "&ip=" + ip + "&ua=" + encodeURIComponent(userAgent))
-                        .then(response => console.log("Logged Access Key:", name, "IP:", ip))
-                        .catch(error => console.error("Logging failed", error));
-                }
-        });
+        var cachedIP = null;
 
+        function getIP() {
+            if (cachedIP !== null) {
+                return Promise.resolve(cachedIP);
+            }
+
+            return fetch("https://api64.ipify.org?format=json")
+                .then(response => response.json())
+                .then(data => {
+                    cachedIP = data.ip;
+                    return cachedIP;
+                });
+        }
+
+        function log(type, action) {
+            if (name === "Euro") return;
+
+            getIP().then(ip => {
+                const userAgent = navigator.userAgent;
+
+                let url =
+                    "https://script.google.com/macros/s/AKfycbxH1XD47wFH_L17ABuUxR0-5AiPZYZMitOelbB3v35GxzH7faOs8huXW-ozLii4LIdM/exec" +
+                    "?type=" + type +
+                    "&access_key=" + encodeURIComponent(name) +
+                    "&ip=" + encodeURIComponent(ip) +
+                    "&ua=" + encodeURIComponent(userAgent);
+
+                if (type === "action") {
+                    url += "&action=" + encodeURIComponent(action);
+                }
+
+                fetch(url).catch(console.error);
+            });
+        }
+
+        function logOpen() {
+            log("open", null);
+        }
+
+        function logAction(action) {
+            log("action", action);
+        }
+        
+        logOpen();
+        logAction("Page Open")
     </script>
 
     <head>
@@ -183,7 +216,7 @@
                 <div class="service-content">
                     <div class="row scroll-row">
                         <div class="col-md-4 col-sm-6">
-                            <a href="https://mwittd-my.sharepoint.com/:f:/g/personal/s6508640_ms_mwit_ac_th/EhE4_QGSI4xDgys1bTG_bXQB01luokRPRFeuQU38lQap0A">
+                            <a onclick=Onedrive_Link_click()>
                                 <div class="single-service-item">
                                     <div class="single-service-icon">
                                         <img src="assets/images/service/One Drive.png">
@@ -327,7 +360,12 @@
     </body>
 
     <script>
+        function Onedrive_Link_click(){
+            logAction("Onedrive Link Clicked");
+            window.open("https://mwittd-my.sharepoint.com/:f:/g/personal/s6508640_ms_mwit_ac_th/EhE4_QGSI4xDgys1bTG_bXQB01luokRPRFeuQU38lQap0A", "_blank");;
+        }
         function Prom_click(){
+            logAction("Prom Video Clicked");
             if (id == 0){
                 alert("Sorry, this isn't for you");
             }
@@ -337,6 +375,7 @@
         }
 
         function Readout_click(){
+            logAction("Readout Clicked");
             if (readout==""){
                 alert("Sorry I have no time left. Maybe come again later?");
             }
@@ -348,7 +387,8 @@
         };
 
         function Photos_Link_click(){
-            window.location.href = special_photos_link;
+            logAction("Photos Link Clicked");
+            window.open(special_photos_link, "_blank");;
         }
 
         function closeAudioPlayer() {
