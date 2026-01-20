@@ -1,5 +1,5 @@
 {
-    "Euro": { "id": -1, "photos": "assets/photos/Prair.json", "readout": "assets/audio/FS-Readout/Prair.m4a", "photos_link": "https://drive.google.com/drive/folders/1Hva_joXsMpI-jc1Am7kN6QtRSpxKpzhY?usp=share_link" },
+    "Euro": { "id": -1, "photos": "assets/photos/Prair.json", "readout": "assets/audio/FS-Readout/Tonkla.m4a", "photos_link": "https://drive.google.com/drive/folders/1Hva_joXsMpI-jc1Am7kN6QtRSpxKpzhY?usp=share_link" },
     "Prair": { "id": 0, "photos": "assets/photos/Prair.json", "readout": "assets/audio/FS-Readout/Prair.m4a", "photos_link": "https://drive.google.com/drive/folders/1Hva_joXsMpI-jc1Am7kN6QtRSpxKpzhY?usp=share_link" },
     "Kie": { "id": 1, "photos": "assets/photos/Kie.json", "readout": "assets/audio/FS-Readout/Kie.m4a", "photos_link": "https://drive.google.com/drive/folders/1HTNM8klPBSEfrbvS8q_Qxgd736T-yPjf?usp=share_link" },
     "Nampang": { "id": 2, "photos": "assets/photos/Nampang.json", "readout": "assets/audio/FS-Readout/Nampangs.m4a", "photos_link": "https://drive.google.com/drive/folders/1WUccAGILESLtgTsqzOPeJTFRs41folut?usp=share_link" },
@@ -13,5 +13,5 @@
     "Tin": { "id": 14, "photos": "assets/photos/Tin.json", "readout": "", "photos_link": "https://drive.google.com/drive/folders/1qlbhP8klIFcxuiYCg0eFun8MXZaOSnS1?usp=share_link" },
     "Karnplu": { "id": 15, "photos": "assets/photos/Karnplu.json", "readout": "", "photos_link": "https://drive.google.com/drive/folders/1Gw_GSlwmUo0lyavQmYQSxZ65V5xNXKqS?usp=share_link" },
     "Kiki": { "id": 18, "photos": "assets/photos/Kiki.json", "readout": "assets/audio/FS-Readout/Kiki.m4a", "photos_link": "https://drive.google.com/drive/folders/1j3j6ClM3v_yF1FzwijTLGMMDDUVNBFsP?usp=sharing" },
-    "Tonkla": { "id": 24, "photos": "assets/photos/Tonkla.json", "readout": "", "photos_link": "https://drive.google.com/drive/folders/1s4wHKJXXBVOFSxVBc7UNSuL71QGfZH7r?usp=share_link" }
+    "Tonkla": { "id": 24, "photos": "assets/photos/Tonkla.json", "readout": "assets/audio/FS-Readout/Tonkla.m4a", "photos_link": "https://drive.google.com/drive/folders/1s4wHKJXXBVOFSxVBc7UNSuL71QGfZH7r?usp=share_link" }
 }
