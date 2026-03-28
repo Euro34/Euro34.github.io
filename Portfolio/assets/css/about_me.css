@@ -1,0 +1,92 @@
+.about-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me .statement{
+    text-align: justify;
+    text-indent: 5%;
+    font-size: 24px;
+    max-width: 1000px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about-me .personal-facts{
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	gap: 5vw;
+}
+
+.about-me .personal-facts .container.grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 4vw;
+	row-gap: 3vw;
+}
+
+.about-me .container.grid .item{
+	background-color: var(--secondary-color);
+    width: 100%;
+	padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+	border-radius: 30px;
+}
+
+.about-me .personal-facts ul{
+	display: flex;
+	flex-direction: column;
+	padding-top:20px;
+	padding-left:35px;
+	gap: 15px;
+}
+
+.about-me .personal-facts ul li{
+    font-size: 20px;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.skill-label {
+    font-size: 18px;
+    width: 130px;
+}
+
+.skill-bar {
+    flex: 1;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    width: var(--level);
+    background-color: var(--accent1-color);
+    border-radius: 100px;
+    transition: width 0.6s ease;
+}
+
+.skill-percent {
+    width: 38px;
+    text-align: right;
+    font-size: 15px;
+    opacity: 0.7;
+    flex-shrink: 0;
+}

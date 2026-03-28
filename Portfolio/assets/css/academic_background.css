@@ -1,0 +1,58 @@
+.academic-background{
+	padding-top: 50px;
+}
+.academic-background .academic-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 50px;
+	padding-bottom: 100px;
+	gap: 50px;
+}
+.academic-background .container{
+	display:flex;
+	justify-content: space-between;
+	background-color: var(--secondary-color);
+	max-width: 1300px;
+	padding:50px;
+	gap: 50px;
+	border-radius: 30px;
+}
+
+.academic-background .container .item{
+	display: flex;
+	flex-direction: column;
+	max-width: 80%;
+	gap: 10px;
+	justify-content: center;
+}
+
+.academic-background .container img{
+	width: auto;
+	height: 17vw;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.academic-background .stack {
+    position: relative;
+    width: auto;
+    height: 17vw;
+    aspect-ratio: 1;
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-shrink: 0;
+}
+
+.academic-background .stack img.background{
+	filter: invert(1);
+	z-index: 1;
+}
+
+.academic-background .stack img {
+    position: absolute;
+    left: -50px;
+    z-index: 2;
+    object-fit: contain;
+	z-index: 2;
+}

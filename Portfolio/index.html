@@ -1,5 +1,5 @@
 <!-- http://localhost:8000/Portfolio/?mode=dev -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,10 +9,6 @@
         <!-- Script -->
         <script src="assets/js/log_traffic.js"></script>
 
-        <!-- Font -->
-        <link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+Thai" rel="stylesheet">
-
         <!-- For favicon png -->
         <link rel="shortcut icon" type="image/icon" href="../assets/logo/favicon.ico"/>
         <link rel="apple-touch-icon" sizes="180x180" href="../assets/Logo/apple-touch-icon.png">
@@ -21,9 +17,15 @@
         <link rel="manifest" href="../assets/Logo/site.webmanifest">
 
         <!-- Style -->
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/main_style.css">
         <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/home.css">
+        <link rel="stylesheet" href="assets/css/about_me.css">
+        <link rel="stylesheet" href="assets/css/feature_work.css">
+        <link rel="stylesheet" href="assets/css/achievements.css">
+        <link rel="stylesheet" href="assets/css/academic_background.css">
+        <link rel="stylesheet" href="assets/css/contact.css">
+        <link rel="stylesheet" href="assets/css/responsive.css">
 
         <!-- Title -->
         <title>Euro's Portfolio</title>
@@ -33,7 +35,8 @@
         <div class="navbar">
             <nav>
                 <div class="container">
-                    <a class="active" href="#home"><img src="assets/picture/home.svg" alt="Home"></a>
+                    <a class="active" href="#home"><img id="home_pic" src="assets/picture/home.svg" alt="Home"></a>
+                    <a href="#about-me">About Me</a>
                     <a href="#feature-work">Feature Work</a>
                     <a href="#achievements">Achievements</a>
                     <a href="#academic-background">Academic Background</a>
@@ -45,38 +48,88 @@
             <div class="introduction">
                 <img id="portrait" src="assets/picture/Portrait.jpeg" alt="Euro image">
                 <div class="name">
-                    <h1>Papangkorn (Euro)</h1>
-                    <h1>Pongkapanakrai</h1>
-                    <h2>ปภังกร พงคพนาไกร (ยูโร)</h2>
-                    <div class="statement">
-                        <h4>I got introduced to porgramming at 13 years old. 
-                            Since then, Programming has always been my passion.
-                            I have created many projects, both for fun and for work. 
-                            I am always looking for new challenges to improve my skills 
-                            and to create something new and useful.
-                        </h4>
-                    </div>
+                    <h1>Hi, I'm</h1>
+                    <h1 id="name">Papangkorn</h1>
                 </div>
+            </div>
+        </section>
+        <section class="about-me" id="about-me">
+            <h2>About Me</h2>
+            <div class="statement">
+                I got introduced to porgramming at 13 years old. 
+                Since then, Programming has always been my passion.
+                I have created many projects, both for fun and for work. 
+                I am always looking for new challenges to improve my skills 
+                and to create something new and useful.
             </div>
             <div class="personal-facts">
                 <div class="container grid">
-                    <div class="fact-head">
+                    <div class="item">
                         <h3>Personal Information</h3>
                         <ul>
+                            <li>Name: Papangkorn Pongkapanakrai (Euro)</li>
+                            <li>ชื่อ: ปภังกร พงคพนาไกร (ยูโร)</li>
                             <li>Birth Date: 23 May 2007</li>
                             <li>Nationality: Thai</li>
+                            <li>Languages: Thai (Native), English (Fluent), Japanese (Basic)</li>
+                            <li>MBTI: INTJ</li>
                         </ul>
                     </div>
-                    <div class="fact-head">
-                        <h3>Soft Skills</h3>
-                        <ul>
-                            <li>Problem Solving</li>
-                            <li>Critical Thinking</li>
-                            <li>Leadership</li>
-                            <li>Self-Learning</li>
+                    <div class="item">
+                        <h3>Hard Skills</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <span class="skill-label">Python</span>
+                                <div class="skill-bar" style="--level: 90%">
+                                    <div class="skill-fill"></div>
+                                </div>
+                                <span class="skill-percent">90%</span>
+                            </li>
+                            <li>
+                                <span class="skill-label">C++</span>
+                                <div class="skill-bar" style="--level: 30%">
+                                    <div class="skill-fill"></div>
+                                </div>
+                                <span class="skill-percent">30%</span>
+                            </li>
+                            <li>
+                                <span class="skill-label">C#</span>
+                                <div class="skill-bar" style="--level: 65%">
+                                    <div class="skill-fill"></div>
+                                </div>
+                                <span class="skill-percent">65%</span>
+                            </li>
+                            <li>
+                                <span class="skill-label">Rust</span>
+                                <div class="skill-bar" style="--level: 70%">
+                                    <div class="skill-fill"></div>
+                                </div>
+                                <span class="skill-percent">70%</span>
+                            </li>
+                            <li>
+                                <span class="skill-label">HTML / CSS / JS</span>
+                                <div class="skill-bar" style="--level: 90%">
+                                    <div class="skill-fill"></div>
+                                </div>
+                                <span class="skill-percent">90%</span>
+                            </li>
+                            <li>
+                                <span class="skill-label">Git</span>
+                                <div class="skill-bar" style="--level: 90%">
+                                    <div class="skill-fill"></div>
+                                </div>
+                                <span class="skill-percent">90%</span>
+                            </li>
+                            <li>
+                                <span class="skill-label">PostgreSQL</span>
+                                <div class="skill-bar" style="--level: 30%">
+                                    <div class="skill-fill"></div>
+                                </div>
+                                <span class="skill-percent">30%</span>
+                            </li>
                         </ul>
                     </div>
-                    <div class="fact-head">
+                    <div class="item">
                         <h3>Interests</h3>
                         <ul>
                             <li>Programming & Computation</li>
@@ -85,24 +138,25 @@
                             <li>Astronomy & Astrophysics</li>
                         </ul>
                     </div>
-                    <div class="fact-head">
-                        <h3>Hard Skills</h3>
+                    <div class="item">
+                        <h3>Soft Skills</h3>
                         <ul>
-                            <li>Programming Languages: <br>Python, C++, C#, Swift, Rust, HTML & CSS & JavaScript</li>
-                            <li>Tools: Git</li>
-                            <li>Databases: PostgreSQL</li>
+                            <li>Problem Solving</li>
+                            <li>Critical Thinking</li>
+                            <li>Leadership</li>
+                            <li>Self-Learning</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="feature-work even" id="feature-work">
+        <section class="feature-work" id="feature-work">
             <h2>Feature Work</h2>
         </section>
         <section class="achievements" id="achievements">
             <h2>Achievements</h2>
         </section>
-        <section class="academic-background even" id="academic-background">
+        <section class="academic-background" id="academic-background">
             <h2>Academic Background</h2>
             <div class="academic-container">
                 <div class="container">
@@ -116,7 +170,10 @@
                             I am studying there since Fall 2024 at undergraduate level in Computer Enginnering major, and I am expected to graduate in Spring 2029. 
                         </p>
                     </div>
-                    <img src="assets/picture/umass_logo.png" alt="UMass Logo">
+                    <div class="stack">
+                        <img src="assets/picture/circle.svg" class="background">
+                        <img src="assets/picture/umass_logo.png" alt="UMass Logo">
+                    </div>
                 </div>
                 <div class="container">
                     <img src="assets/picture/mwit_logo.png" alt="Mahidol Wittayanusorn Logo">
@@ -175,7 +232,7 @@
             </div>
         </section>
         <section class="contact" id="contact">
-            <h2>Contact</h2>
+            <a href="assets/Contact/Papangkorn Pongkapanakrai.vcf" download="Euro's Contact.vcf"><h2>Contact</h2></a>
             <div class="container">
                 <ul>
                     <li><a href="mailto:euro.ppk@gmail.com" target="_blank"><img src="assets/picture/mail.svg" class="icon"> :  euro.ppk@gmail.com</span></a></li>
@@ -184,6 +241,10 @@
                     <li><a href="https://www.facebook.com/euro.papangkorn" target="_blank"><img src="assets/picture/facebook.svg" class="icon"> :  Euro Ppk</span></a></li>
                     <li><a href="https://www.instagram.com/euro__ppk/" target="_blank"><img src="assets/picture/instagram.svg" class="icon"> :  euro__ppk</span></a></li>
                     <li><a href="https://line.me/ti/p/_csD5iT4g9" target="_blank"><img src="assets/picture/line.svg" class="icon"> <span> :  euro.id.line</span></a></li>
+                </ul>
+                <ul>
+                    <li><a href="tel:+660827526082"><img src="assets/picture/phone.svg" class="icon">(Thai) : +66 082-752-6082</a></li>
+                    <li><a href="tel:+14134680003"><img src="assets/picture/phone.svg" class="icon">(US) : +1 413-468-0003</a></li>
                 </ul>
             </div>
         </section>

@@ -9,6 +9,7 @@ html {
     width: 100vw;
     position: sticky;
     top: 20px;
+    z-index: 100;
 }
 
 nav {
@@ -46,7 +47,7 @@ nav a{
 nav img{
     width: 20px;
     height: 20px;
-    filter: invert(1);
+    filter: invert(80%) sepia(55%) saturate(0%) hue-rotate(137deg) brightness(100%) contrast(99%)
 }
 
 .nav-bubble {
@@ -55,7 +56,7 @@ nav img{
     height: 50px;
     width: 110%;
     border-radius: 50px;
-    background-color: var(--accent-color);
+    background-color: var(--accent1-color);
     transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1),
                 width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
                 opacity 0.3s ease;

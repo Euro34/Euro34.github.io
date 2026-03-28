@@ -1,0 +1,113 @@
+/*-------------------------------------
+Color Palette
+--------------------------------------*/
+:root {
+	--text-color: #d3d3d3;
+	--navbartext-color:#e4e4e4;
+	--accent1-color: #9fd3c7;
+	--accent2-color: #86b3cf;
+	--primary-color: #385170;
+	--secondary-color: #283443;
+	--primary-background-color: #141f29;
+	--secondary-background-color: #142536;
+}
+
+/*-------------------------------------
+Reset code
+--------------------------------------*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+/*-------------------------------------
+fonts
+--------------------------------------*/
+@font-face {
+    font-family: 'Rufina';
+    src: url('/fonts/rufina-400.woff2') format('woff2');
+    font-weight: 400;
+    unicode-range: U+0000-002F, U+003A-0DFF, U+0E80-FFFF;
+}
+
+@font-face {
+    font-family: 'Rufina';
+    src: url('/fonts/rufina-700.woff2') format('woff2');
+    font-weight: 700;
+    unicode-range: U+0000-002F, U+003A-0DFF, U+0E80-FFFF;
+}
+
+@font-face {
+    font-family: 'Noto Sans Thai';
+    src: url('/fonts/noto-sans-thai-400.woff2') format('woff2');
+    unicode-range: U+0E00-0E7F, U+0030-0039;
+}
+
+* {
+    font-family: 'Rufina', 'Noto Sans Thai', serif;
+	color: var(--text-color);
+}
+
+/*-------------------------------------
+body
+--------------------------------------*/
+body{
+	font-size:16px;
+    text-transform:initial;
+	background-color: var(--primary-background-color);
+    max-width:1920px;
+	overflow-x:hidden;
+}
+
+section{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+/*-------------------------------------
+heading and text
+--------------------------------------*/
+h1{
+	font-size: 80px;
+}
+
+h2{
+	display: flex;
+	font-size: 40px;
+	justify-content: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: var(--accent2-color);
+}
+
+h3{
+	font-size: 30px;
+}
+
+h4{
+	font-size: 20px;
+}
+
+h5{
+	font-size: 18px;
+}
+
+p{
+	font-size: 15px;
+}
+
+a{
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--text-color);
+}

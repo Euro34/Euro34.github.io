@@ -1,0 +1,38 @@
+.home{
+	font-size: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.introduction{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: clamp(auto, 70vh, 1000px);
+	margin-top: clamp(20px, 15vh, 500px);
+	margin-bottom: clamp(20px, 25vh, 500px);
+	gap: 5vw;
+}
+
+#portrait {
+	width: 30vw;
+	height: auto;
+	border-radius: 50px;
+}
+
+.home .name{
+	align-items: center;
+	width: 30vw;
+	padding:50px;
+	gap: 20px;
+    z-index: 2;
+}
+
+.home .name .statement{
+	width: 90%;
+	padding-top: 30px;
+}
+
+h1#name{
+    color: var(--accent1-color);
+}
