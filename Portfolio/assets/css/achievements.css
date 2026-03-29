@@ -1,0 +1,75 @@
+.achievements .carousel {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    gap: 100px;
+    z-index: 2;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-left: calc(50% - 250px);
+    padding-right: calc(50% - 250px);
+}
+
+.achievements .carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.achievements .carousel .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    flex-shrink: 0;
+    width: 500px;
+    height: 60vh;
+    padding: 50px;
+    gap: 10px;
+    border-radius: 20px;
+    scroll-snap-align: center;
+}
+
+.achievements .carousel .item img {
+    width: 100%;
+    height: auto;
+}
+
+.achievements .carousel .item img.portrait {
+    width: auto;
+    height: 70%;
+}
+
+.achievements .carousel .item h3 {
+    font-size: 30px;
+}
+
+.achievements .carousel .item p {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* --- Dots --- */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.carousel-dots .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+    width: 20px;
+    border-radius: 4px;
+    background-color: var(--accent1-color);
+}

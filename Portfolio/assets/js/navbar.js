@@ -32,18 +32,18 @@ links.forEach(link => {
 const sectionIds = Array.from(document.querySelectorAll('section')).map(el => el.id);
 const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 
-const observer = new IntersectionObserver((entries) => {
+const NavBarObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 setActive(entry.target.id);
             }
         });
     }, {
-        rootMargin: '-80px 0px -40% 0px', // offsets for sticky navbar height
+        rootMargin: '-80px 0px -30% 0px', // offsets for sticky navbar height
         threshold: 0
     });
 
-sections.forEach(s => observer.observe(s));
+sections.forEach(s => NavBarObserver.observe(s));
 
 // Init
 moveBubbleTo(links[0]);

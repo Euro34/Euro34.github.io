@@ -6,9 +6,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-        <!-- Script -->
-        <script src="assets/js/log_traffic.js"></script>
-
         <!-- For favicon png -->
         <link rel="shortcut icon" type="image/icon" href="../assets/logo/favicon.ico"/>
         <link rel="apple-touch-icon" sizes="180x180" href="../assets/Logo/apple-touch-icon.png">
@@ -17,6 +14,7 @@
         <link rel="manifest" href="../assets/Logo/site.webmanifest">
 
         <!-- Style -->
+        <link rel="stylesheet" href="assets/css/font.css">
         <link rel="stylesheet" href="assets/css/main_style.css">
         <link rel="stylesheet" href="assets/css/navbar.css">
         <link rel="stylesheet" href="assets/css/home.css">
@@ -25,7 +23,6 @@
         <link rel="stylesheet" href="assets/css/achievements.css">
         <link rel="stylesheet" href="assets/css/academic_background.css">
         <link rel="stylesheet" href="assets/css/contact.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
 
         <!-- Title -->
         <title>Euro's Portfolio</title>
@@ -77,6 +74,7 @@
                     </div>
                     <div class="item">
                         <h3>Hard Skills</h3>
+                        <h5>+Confidence Level</h5>
                         <ul class="skills-list">
                             <li>
                                 <span class="skill-label">Python</span>
@@ -94,17 +92,17 @@
                             </li>
                             <li>
                                 <span class="skill-label">C#</span>
-                                <div class="skill-bar" style="--level: 65%">
+                                <div class="skill-bar" style="--level: 75%">
                                     <div class="skill-fill"></div>
                                 </div>
-                                <span class="skill-percent">65%</span>
+                                <span class="skill-percent">75%</span>
                             </li>
                             <li>
                                 <span class="skill-label">Rust</span>
-                                <div class="skill-bar" style="--level: 70%">
+                                <div class="skill-bar" style="--level: 80%">
                                     <div class="skill-fill"></div>
                                 </div>
-                                <span class="skill-percent">70%</span>
+                                <span class="skill-percent">80%</span>
                             </li>
                             <li>
                                 <span class="skill-label">HTML / CSS / JS</span>
@@ -155,13 +153,61 @@
         </section>
         <section class="achievements" id="achievements">
             <h2>Achievements</h2>
+            <div class="carousel">
+                <div class="item">
+                    <img src="assets/certificate/Academic/NSC.png">
+                    <h3>NSC</h3> 
+                    <p>Won honorable award in National Software Contest</p>
+                </div>
+                <div class="item">
+                    <img src="assets/certificate/Academic/Hackathon 1.png">
+                    <h3>Hackathon</h3> 
+                    <p>2nd Runner-Up for the Innovation Hackathon Camp 2024</p>
+                </div>
+                <div class="item">
+                    <img src="assets/certificate/Academic/STEM M4.png">
+                    <h3>STEM Challenge</h3> 
+                    <p>Won an outstanding solution award</p>
+                </div>
+                <div class="item">
+                    <img src="assets/certificate/Academic/POSN Physics 1.png">
+                    <h3>POSN Physics 1</h3> 
+                    <p>Qualified and Studied in Physics POSN Camp 1</p>
+                </div>
+                <div class="item">
+                    <img src="assets/certificate/Academic/POSN Physics 2.png">
+                    <h3>POSN Physics 2</h3> 
+                    <p>Qualified and Studied in Physics POSN Camp 2</p>
+                </div>
+                <div class="item">
+                    <img src="assets/certificate/Academic/POSN Astro 1.jpg">
+                    <h3>POSN Astronomy 1</h3> 
+                    <p>Qualified and Studied in Astronomy & Astrophysics POSN Camp 1</p>
+                </div>
+                <div class="item">
+                    <img src="assets/certificate/Academic/POSN Astro 2.jpg">
+                    <h3>POSN Astronomy 2</h3> 
+                    <p>Qualified and Studied in Astronomy & Astrophysics POSN Camp 2</p>
+                </div>
+                <div class="item">
+                    <img class="portrait" src="assets/certificate/Academic/Bell.jpeg">
+                    <h3>Bell Language School</h3> 
+                    <p>Received B2 Level of CEFR English Proficiency</p>
+                </div>
+                <div class="item">
+                    <img src="assets/certificate/Academic/Gem & Jewelry.jpeg">
+                    <h3>Gem & Jewelry</h3> 
+                    <p>Field Study at Gem & Jewelry Institute of Thailand</p>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
         </section>
         <section class="academic-background" id="academic-background">
             <h2>Academic Background</h2>
             <div class="academic-container">
                 <div class="container">
                     <div class="item">
-                        <h3>University (GPA:4.0*/4.0)</h3>
+                        <h3>Bachelor's Degree (GPA:4.0*/4.0)</h3>
                         <h4>University of Massachusetts, Amherst</h4>
                         <h5>Major: Computer Engineering</h5>
                         <p>
@@ -214,7 +260,7 @@
                 <div class="container">
                     <img src="assets/picture/anubanubon_logo.png" alt="Anuban Ubonratchathani Logo">
                     <div class="item">
-                        <h3>Primary School</h3>
+                        <h3>Primary School (GPA:3.91/4.0)</h3>
                         <h4>Anuban Ubonratchathani School / อนุบาลอุบลราชธานี</h4>
                         <p>
                             Anuban Ubon Ratchathani School is located in Ubon Ratchathani, Thailand. 
@@ -251,7 +297,9 @@
     </body>
 
     <footer>
-         <script src="assets/js/navbar.js"></script>
+        <script src="assets/js/log_traffic.js"></script>
+        <script src="assets/js/navbar.js"></script>
+        <script src="assets/js/carousel.js"></script>
         <script>log("Page Loaded");</script>
     </footer>
 </html>
