@@ -1,12 +1,10 @@
-.academic-background{
-	padding-top: 50px;
-}
 .academic-background .academic-container{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 50px;
 	padding-bottom: 100px;
+	margin-left: 100px;
+	margin-right: 100px;
 	gap: 50px;
 }
 .academic-background .container{
@@ -22,9 +20,9 @@
 .academic-background .container .item{
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	max-width: 80%;
 	gap: 10px;
-	justify-content: center;
 }
 
 .academic-background .container img{

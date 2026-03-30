@@ -1,16 +1,26 @@
 .contact{
+	align-items: normal;
 	background-color: var(--secondary-background-color);
+	padding-top: 15px;
+	padding-left: 40px;
 }
+
+.contact h2{
+	padding-top: 20px;
+}
+
 .contact .container{
 	display: flex;
 	gap: 100px;
 }
+
 .contact ul{
 	display: flex;
 	list-style-type: none;
 	flex-direction: column;
 	gap: 20px;
 }
+
 .contact img.icon{
 	width: 20px;
 	height: 20px;

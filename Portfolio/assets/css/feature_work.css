@@ -1,0 +1,39 @@
+.feature-work .item {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    width: 95vw;
+    height: 80vh;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 30px;
+}
+
+.feature-work .item img {
+    width: auto;
+    height: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.feature-work .item .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 50px 20px 50px 50px;
+}
+
+.feature-work .item .text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+.feature-work .item .text a img.icon{
+	width: 20px;
+	height: 20px;
+	filter: invert(1)
+}

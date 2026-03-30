@@ -45,10 +45,12 @@ body{
 }
 
 section{
-	padding-top: 25px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	padding-top: 90px;
 	padding-bottom: 25px;
-	padding-left: 40px;
-	padding-right: 40px;
+	gap: 30px;
 }
 
 /*-------------------------------------
@@ -62,8 +64,6 @@ h2{
 	display: flex;
 	font-size: 40px;
 	justify-content: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
 	color: var(--accent2-color);
 }
 

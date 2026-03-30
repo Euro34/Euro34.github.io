@@ -1,10 +1,12 @@
+.achievements {
+    align-items: normal;
+}
+
 .achievements .carousel {
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
     scrollbar-width: none;
-    padding-top: 50px;
-    padding-bottom: 30px;
     gap: 100px;
     z-index: 2;
     scroll-snap-type: x mandatory;
@@ -25,7 +27,7 @@
     background-color: var(--secondary-color);
     flex-shrink: 0;
     width: 500px;
-    height: 60vh;
+    height: 70vh;
     padding: 50px;
     gap: 10px;
     border-radius: 20px;
@@ -52,14 +54,33 @@
 }
 
 /* --- Dots --- */
-.carousel-dots {
+.achievements #carouselDotsBackground {
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.2s ease;
+    border-radius: 10px;
+}
+
+.achievements .carousel-dots {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: fit-content;
     gap: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    transition: background-color 0.2s ease, gap 0.2s ease;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-.carousel-dots .dot {
+.achievements .carousel-dots .dot {
     width: 8px;
     height: 8px;
     border-radius: 4px;
@@ -68,8 +89,25 @@
     cursor: pointer;
 }
 
-.carousel-dots .dot.active {
+.achievements .carousel-dots .dot.active {
     width: 20px;
     border-radius: 4px;
+    background-color: var(--accent1-color);
+}
+
+/* --- Scrub Dots --- */
+.achievements #carouselDotsBackground.scrubbing {
+    background-color: var(--primary-color);
+    cursor: grabbing;
+}
+
+.achievements .carousel-dots.scrubbing .dot {
+    width: 8px;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+}
+
+.achievements .carousel-dots.scrubbing .dot.active {
+    opacity: 1;
     background-color: var(--accent1-color);
 }
