@@ -23,19 +23,44 @@ links.forEach(link => {
     });
 });
 
-// Use querySelectorAll('[id]') scoped to your main content, or list IDs manually
-const sectionIds = Array.from(document.querySelectorAll('section')).map(el => el.id);
-const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+const sections = Array.from(document.querySelectorAll('section')).filter(el => el.id);
+
+let lastScrollY = window.scrollY;
+
+function isAtBottom() {
+    return window.innerHeight + window.scrollY >= document.body.scrollHeight - 10;
+}
 
 const NavBarObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            moveBubbleTo(entry.target.id);
-        }
+    const scrollingDown = window.scrollY > lastScrollY;
+    lastScrollY = window.scrollY;
+
+    if (isAtBottom()) {
+        moveBubbleTo(sections[sections.length - 1].id);
+        return;
+    }
+    
+    // Collect all currently intersecting sections (not just from this batch of entries)
+    const visibleSections = sections.filter(s => {
+        const rect = s.getBoundingClientRect();
+        const viewHeight = window.innerHeight;
+
+        // Check if section occupies at least x% of the screen
+        const visibleHeight = Math.min(rect.bottom, viewHeight) - Math.max(rect.top, 0);
+        return visibleHeight / viewHeight >= 0.4;
     });
+
+    if (visibleSections.length === 0) return;
+
+    // Pick the section the user is scrolling toward
+    const target = scrollingDown
+        ? visibleSections[visibleSections.length - 1]
+        : visibleSections[0];
+
+    moveBubbleTo(target.id);
 }, {
-    // rootMargin: '-80px 0px -30% 0px', // offsets for sticky navbar height
-    threshold: 0.45
+    threshold: Array.from({ length: 11 }, (_, i) => i * 0.1) // [0, 0.1, 0.2, ... 1.0]
 });
 
 sections.forEach(s => NavBarObserver.observe(s));
