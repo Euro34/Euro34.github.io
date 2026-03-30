@@ -29,7 +29,7 @@ const sections = Array.from(document.querySelectorAll('section')).filter(el => e
 let lastScrollY = window.scrollY;
 
 function isAtBottom() {
-    return window.innerHeight + window.scrollY >= document.body.scrollHeight - 10;
+    return window.innerHeight + window.scrollY >= document.body.scrollHeight - 50;
 }
 
 const NavBarObserver = new IntersectionObserver((entries) => {
