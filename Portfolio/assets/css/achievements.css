@@ -45,16 +45,16 @@
 }
 
 .achievements .carousel .item h3 {
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 .achievements .carousel .item p {
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
 }
 
 
-/* --- Dots --- */
+/* Dots */
 .achievements #carouselDotsBackground {
     width: fit-content;
     height: fit-content;
@@ -96,7 +96,7 @@
     background-color: var(--accent1-color);
 }
 
-/* --- Scrub Dots --- */
+/* Scrub Dots */
 .achievements #carouselDotsBackground.scrubbing {
     background-color: var(--primary-color);
     cursor: grabbing;

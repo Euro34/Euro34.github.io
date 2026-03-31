@@ -40,7 +40,7 @@ nav a{
     z-index: 1;
     height: 50px;
     min-width: 50px;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: var(--navbartext-color);
 }
 
