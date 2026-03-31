@@ -20,6 +20,9 @@ links.forEach(link => {
         const target = document.getElementById(id);
         if (target) target.scrollIntoView({ behavior: 'smooth' });
         moveBubbleTo(id);
+
+        observerLocked = true;
+        setTimeout(() => { observerLocked = false; }, 200);
     });
 });
 
@@ -32,12 +35,23 @@ function isAtBottom() {
     return window.innerHeight + window.scrollY >= document.body.scrollHeight - 50;
 }
 
+function isAtTop() {
+    return window.scrollY <= 50;
+}
+
 const NavBarObserver = new IntersectionObserver((entries) => {
+    if (observerLocked) return;
+
     const scrollingDown = window.scrollY > lastScrollY;
     lastScrollY = window.scrollY;
 
     if (isAtBottom()) {
         moveBubbleTo(sections[sections.length - 1].id);
+        return;
+    }
+
+    if (isAtTop()) {
+        moveBubbleTo(sections[0].id);
         return;
     }
     
@@ -63,4 +77,5 @@ const NavBarObserver = new IntersectionObserver((entries) => {
     threshold: Array.from({ length: 11 }, (_, i) => i * 0.1) // [0, 0.1, 0.2, ... 1.0]
 });
 
+observerLocked = false;
 sections.forEach(s => NavBarObserver.observe(s));

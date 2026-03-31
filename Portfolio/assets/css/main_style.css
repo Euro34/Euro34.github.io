@@ -10,6 +10,15 @@ Color Palette
 	--secondary-color: #283443;
 	--primary-background-color: #141f29;
 	--secondary-background-color: #142536;
+
+	--text-xxxl: 5rem;
+	--text-xxl: 3rem;
+	--text-xl: 1.875rem;
+	--text-l: 1.5rem;
+	--text-m: 1.25rem;
+	--text-s: 1.125rem;
+	--text-xs: 1rem;
+	--text-xxs: 0.938rem;
 }
 
 /*-------------------------------------
@@ -40,7 +49,6 @@ body {
 	font-size:16px;
     text-transform:initial;
 	background-color: var(--primary-background-color);
-    max-width:1920px;
 	overflow-x:hidden;
 }
 
@@ -57,34 +65,34 @@ section {
 heading and text
 --------------------------------------*/
 h1 {
-	font-size: 5rem;
+	font-size: var(--text-xxxl);
 }
 
 h2 {
 	display: flex;
-	font-size: 3rem;
+	font-size: var(--text-xxl);
 	justify-content: center;
 	color: var(--accent2-color);
 }
 
 h3 {
-	font-size: 1.875rem;
+	font-size: var(--text-xl);
 }
 
 h4 {
-	font-size: 1.25rem;
+	font-size: var(--text-m);
 }
 
 h5 {
-	font-size: 1.125rem;
+	font-size: var(--text-s);
 }
 
 p {
-	font-size: 0.938rem;
+	font-size: var(--text-xxs);
 }
 
 a {
-    font-size: 0.938rem;
+    font-size: var(--text-xxs);
     text-decoration: none;
     color: var(--text-color);
 }
@@ -92,3 +100,19 @@ a {
 /*-------------------------------------
 animation
 --------------------------------------*/
+
+/*-------------------------------------
+responsive
+--------------------------------------*/
+@media screen and (max-width: 1024px) {
+	:root {
+		--text-xxxl: 4.5rem;
+		--text-xxl: 2.8rem;
+		--text-xl: 1.8rem;
+		--text-l: 1.25rem;
+		--text-m: 1.125rem;
+		--text-s: 1rem;
+		--text-xs: 0.938rem;
+		--text-xxs: 0.875rem;
+	}
+}

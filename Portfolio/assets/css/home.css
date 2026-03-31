@@ -1,5 +1,5 @@
 .home {
-	font-size: 1.25rem;
+	font-size: var(--text-m);
 	justify-content: center;
 	align-items: center;
 }
@@ -35,16 +35,8 @@ h1#name {
 }
 
 /* Responsive */
-@media (max-width: 1280px) {
-
-}
-
 @media (max-width: 768px) {
 	.home #portrait {
 		display: none;
 	}
-}
-
-@media (max-width: 480px) {
-
 }

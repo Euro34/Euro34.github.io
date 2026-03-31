@@ -1,17 +1,19 @@
-.about-me{
+.about-me {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.about-me .statement{
+.about-me .statement {
     text-align: justify;
     text-indent: 5%;
-    font-size: 1.5rem;
+    font-size: var(--text-l);
     max-width: 1000px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.about-me .container.grid{
+.about-me .container.grid {
 	display: grid;
 	grid-template: auto auto / 1fr 1fr;
     grid-auto-flow: column;
@@ -21,7 +23,7 @@
     margin-top: 30px;
 }
 
-.about-me .container.grid .item{
+.about-me .container.grid .item {
 	background-color: var(--secondary-color);
     width: 100%;
 	padding-top: 50px;
@@ -31,7 +33,7 @@
 	border-radius: 30px;
 }
 
-.about-me ul{
+.about-me ul {
 	display: flex;
 	flex-direction: column;
 	padding-top:20px;
@@ -39,8 +41,8 @@
 	gap: 20px;
 }
 
-.about-me ul li{
-    font-size: 1.25rem;
+.about-me ul li {
+    font-size: var(--text-m);
 }
 
 .about-me .skills-list {
@@ -56,7 +58,7 @@
 }
 
 .about-me .skill-label {
-    font-size: 1rem;
+    font-size: var(--text-xs);
     width: 140px;
 }
 
@@ -79,7 +81,15 @@
 .about-me .skill-percent {
     width: 38px;
     text-align: right;
-    font-size: 0.938rem;
+    font-size: var(--text-xxs);
     opacity: 0.7;
     flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 1280px) {
+    .about-me .container.grid {
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
 }

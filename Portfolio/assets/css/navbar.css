@@ -1,8 +1,4 @@
-html {
-    scroll-behavior: smooth;
-}
-
-.navbar{
+.navbar {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +19,7 @@ nav {
     max-width: 1000px;
 }
 
-nav .container{
+nav .container {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -33,18 +29,18 @@ nav .container{
     gap: 10px;
 }
 
-nav a{
+nav a {
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
     height: 50px;
     min-width: 50px;
-    font-size: 1.25rem;
+    font-size: var(--text-m);
     color: var(--navbartext-color);
 }
 
-nav img{
+nav img {
     width: 20px;
     height: 20px;
     filter: invert(80%) sepia(55%) saturate(0%) hue-rotate(137deg) brightness(100%) contrast(99%)

@@ -3,10 +3,14 @@
     align-items: center;
     background-color: var(--secondary-color);
     width: 95vw;
-    height: 80vh;
+    height: 45vw;
     padding: 10px;
     gap: 20px;
     border-radius: 30px;
+}
+
+.feature-work .item.even {
+    flex-direction: row-reverse;
 }
 
 .feature-work .item img {
@@ -27,7 +31,7 @@
 }
 
 .feature-work .item .text p {
-    font-size: 1.125rem;
+    font-size: var(--text-s);
     line-height: 1.8;
 }
 
@@ -36,4 +40,11 @@
 	width: 20px;
 	height: 20px;
 	filter: invert(1)
+}
+
+/* Responsive */
+@media screen and (max-width: 1280px) {
+    .feature-work .item {
+        height: 40vw;
+    }
 }

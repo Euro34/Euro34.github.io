@@ -28,6 +28,8 @@
     flex-shrink: 0;
     width: 500px;
     height: 70vh;
+    max-height: 700px;
+    min-height: 450px;
     padding: 50px;
     gap: 10px;
     border-radius: 20px;
@@ -45,11 +47,11 @@
 }
 
 .achievements .carousel .item h3 {
-    font-size: 1.875rem;
+    font-size: var(--text-xl);
 }
 
 .achievements .carousel .item p {
-    font-size: 1.25rem;
+    font-size: var(--text-s);
     text-align: center;
 }
 
@@ -111,4 +113,15 @@
 .achievements .carousel-dots.scrubbing .dot.active {
     opacity: 1;
     background-color: var(--accent1-color);
+}
+
+/* Responsive */
+@media screen and (max-width: 956px) {
+    .achievements .carousel .item {
+        width: 300px;
+    }
+    .achievements .carousel .item img {
+        width: 80%;
+        height: auto;
+    }
 }
