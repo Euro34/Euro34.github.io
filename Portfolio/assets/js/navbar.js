@@ -79,3 +79,22 @@ const NavBarObserver = new IntersectionObserver((entries) => {
 
 observerLocked = false;
 sections.forEach(s => NavBarObserver.observe(s));
+
+// Hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const nav = document.querySelector('nav');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+    nav.classList.toggle('open');
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        nav.classList.remove('open');
+    });
+});
