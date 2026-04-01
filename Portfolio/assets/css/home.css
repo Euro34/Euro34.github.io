@@ -1,7 +1,7 @@
 .home {
-	font-size: var(--text-m);
 	justify-content: center;
 	align-items: center;
+	font-size: var(--text-m);
 }
 
 .introduction {
@@ -21,9 +21,9 @@
 }
 
 .home .name {
+    z-index: 2;
 	align-items: center;
 	gap: 20px;
-    z-index: 2;
 }
 
 .home .name .statement {

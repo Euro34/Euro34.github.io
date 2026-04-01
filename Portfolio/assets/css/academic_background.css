@@ -9,18 +9,17 @@
 	display:flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: var(--secondary-color);
 	max-width: 1300px;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin: 0px 20px;
 	padding:50px;
-	gap: 50px;
 	border-radius: 30px;
+	background-color: var(--secondary-color);
+	gap: 50px;
 }
 
 .academic-background .container.even {
 	flex-direction: row-reverse;
-}
+}ß
 
 .academic-background .container .item {
 	display: flex;
@@ -33,23 +32,21 @@
 .academic-background .container img {
 	width: auto;
 	height: 17vw;
-	margin-left: 50px;
-	margin-right: 50px;
+	margin: 0px 50px;
 }
 
 .academic-background .stack {
     position: relative;
+    flex-shrink: 0;
     width: auto;
     height: 17vw;
+    margin: 0px 50px;
     aspect-ratio: 1;
-    margin-left: 50px;
-    margin-right: 50px;
-    flex-shrink: 0;
 }
 
 .academic-background .stack img.background {
-	filter: invert(1);
 	z-index: 1;
+	filter: invert(1);
 }
 
 .academic-background .stack img {
@@ -57,18 +54,15 @@
     left: -50px;
     z-index: 2;
     object-fit: contain;
-	z-index: 2;
 }
 
 /* Responsive */
 @media (max-width: 1032px) {
 	.academic-background .container img {
-		margin-left: 20px;
-		margin-right: 20px;
+		margin: 0px 20px;
 	}
-		.academic-background .stack {
-		margin-left: 20px;
-		margin-right: 20px;
+	.academic-background .stack {
+		margin: 0px 20px;
 	}
 }
 

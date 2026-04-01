@@ -1,8 +1,8 @@
 .contact {
 	align-items: normal;
-	background-color: var(--secondary-background-color);
 	padding-top: 15px;
 	padding-left: 40px;
+	background-color: var(--secondary-background-color);
 }
 
 .contact h2 {
@@ -16,15 +16,15 @@
 
 .contact ul {
 	display: flex;
-	list-style-type: none;
 	flex-direction: column;
+	list-style-type: none;
 	gap: 20px;
 }
 
 .contact img.icon {
 	width: 20px;
-	height: 20px;
-	filter: invert(1)
+	filter: invert(1);
+	height: 20px
 }
 
 .contact a {

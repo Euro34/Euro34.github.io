@@ -1,12 +1,12 @@
 .feature-work .item {
     display: flex;
     align-items: center;
-    background-color: var(--secondary-color);
     width: 95vw;
     height: 45vw;
     padding: 10px;
-    gap: 20px;
     border-radius: 30px;
+    background-color: var(--secondary-color);
+    gap: 20px;
 }
 
 .feature-work .item.even {
@@ -16,10 +16,10 @@
 .feature-work .item img {
     width: auto;
     height: 100%;
+    border-radius: 25px;
     aspect-ratio: 4/3;
     object-fit: cover;
     object-position: center;
-    border-radius: 25px;
 }
 
 .feature-work .item .text {
@@ -38,8 +38,8 @@
 
 .feature-work .item .text a img.icon{
 	width: 20px;
-	height: 20px;
-	filter: invert(1)
+	filter: invert(1);
+	height: 20px
 }
 
 /* Responsive */
