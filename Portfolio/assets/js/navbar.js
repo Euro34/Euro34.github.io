@@ -22,7 +22,7 @@ links.forEach(link => {
         moveBubbleTo(id);
 
         observerLocked = true;
-        setTimeout(() => { observerLocked = false; }, 200);
+        setTimeout(() => { observerLocked = false; }, 300);
     });
 });
 

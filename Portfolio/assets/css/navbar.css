@@ -89,6 +89,12 @@ nav img {
 }
 
 /* Responsive */
+@media screen and (max-width: 1032px) {
+    .nav-links a {
+        font-size: var(--text-s);
+    }
+}
+
 @media screen and (max-width: 960px) and (orientation: landscape), (max-width: 500px) {
     .navbar {
         justify-content: flex-start;
@@ -119,13 +125,14 @@ nav img {
         width: 100%;
         margin: 0;
         border-radius: 0 0 20px 20px;
-        transition: opacity 0.2s ease;
         background-color: var(--primary-color);
         gap: 0;
     }
 
     nav .container .nav-links.open {
         display: flex;
+        opacity: 1;
+        animation: menuItemIn 0.35s ease forwards;
     }
 
     .nav-links a {
@@ -133,6 +140,7 @@ nav img {
         width: 100%;
         height: 50px;
         border-top: 1px solid color-mix(in srgb, var(--navbartext-color) 15%, transparent);
+        font-size: var(--text-l);
     }
 
     .hamburger {
@@ -145,4 +153,27 @@ nav img {
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     .nav-bubble { display: none; }
+}
+
+/* Transition */
+@keyframes menuItemIn {
+    from {
+        transform: translateY(-50px);
+        height: 0px;
+    }
+    to {
+        transform: translateY(0);
+        height: 50px !important;
+    }
+}
+
+@keyframes menuItemOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
 }

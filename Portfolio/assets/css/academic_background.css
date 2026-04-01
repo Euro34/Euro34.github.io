@@ -19,14 +19,14 @@
 
 .academic-background .container.even {
 	flex-direction: row-reverse;
-}ß
+}
 
 .academic-background .container .item {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	max-width: 80%;
-	gap: 10px;
+	gap: 20px;
 }
 
 .academic-background .container img {
@@ -66,7 +66,7 @@
 	}
 }
 
-@media screen and (max-width: 956px) and (orientation: landscape) {
+@media screen and (max-width: 956px) and (orientation: landscape), (max-width: 800px) {
 	.academic-background .container {
 		flex-direction: column !important;
 		padding: 20px
