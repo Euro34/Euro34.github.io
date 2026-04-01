@@ -19,7 +19,7 @@
     aspect-ratio: 4/3;
     object-fit: cover;
     object-position: center;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
 .feature-work .item .text {
@@ -43,8 +43,19 @@
 }
 
 /* Responsive */
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1024px) {
     .feature-work .item {
-        height: 40vw;
+        flex-direction: column !important;
+        height: fit-content;
+    }
+
+    .feature-work .item .text {
+        padding: 20px 10px 20px 20px;
+        gap: 20px;
+    }
+
+    .feature-work .item img {
+        width: 100%;
+        height: auto;
     }
 }

@@ -34,3 +34,9 @@
 }
 
 /* Responsive */
+@media screen and (max-width: 500px) {
+	.contact .container {
+		flex-direction: column;
+		gap: 30px;
+	}
+}

@@ -28,6 +28,7 @@
     flex-shrink: 0;
     width: 500px;
     height: 70vh;
+    max-width: 90vw;
     max-height: 700px;
     min-height: 450px;
     padding: 50px;
@@ -116,12 +117,23 @@
 }
 
 /* Responsive */
-@media screen and (max-width: 956px) {
+@media screen and (max-width: 1024px) {
+    .achievements .carousel {
+        padding-left: calc(50% - 150px);
+        padding-right: calc(50% - 150px);
+    }
     .achievements .carousel .item {
-        width: 300px;
+        width: 400px;
+        height: 400px;
+        padding: 10px;
+        
     }
     .achievements .carousel .item img {
         width: 80%;
         height: auto;
+    }
+        .achievements .carousel .item img.portrait {
+        width: auto;
+        height: 60%;
     }
 }

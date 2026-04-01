@@ -116,3 +116,29 @@ responsive
 		--text-xxs: 0.875rem;
 	}
 }
+
+@media screen and (max-width: 956px) and (max-height: 600px) {
+	:root {
+		--text-xxxl: 4rem;
+		--text-xxl: 2rem;
+		--text-xl: 1rem;
+		--text-l: 0.9em;
+		--text-m: 0.8rem;
+		--text-s: 0.7rem;
+		--text-xs: 0.65rem;
+		--text-xxs: 0.6rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	:root {
+		--text-xxxl: 3rem;
+		--text-xxl: 1.75rem;
+		--text-xl: 1rem;
+		--text-l: 0.9em;
+		--text-m: 0.8rem;
+		--text-s: 0.7rem;
+		--text-xs: 0.65rem;
+		--text-xxs: 0.6rem;
+	}
+}
