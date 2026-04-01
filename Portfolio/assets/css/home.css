@@ -38,8 +38,9 @@ h1#name {
 @media (max-width: 768px) {
 	.introduction {
 		flex-direction: column;
+		margin-top: clamp(10px, 1vh, 500px);
 	}
 	.home #portrait {
-		width: 60vw;
+		width: 65vw;
 	}
 }
