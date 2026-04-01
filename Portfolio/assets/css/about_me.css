@@ -114,4 +114,8 @@
     .about-me .skill-label {
         width: 80px;
     }
+
+    .about-me .skill-bar {
+        height: 7px;
+    }
 }

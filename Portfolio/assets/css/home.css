@@ -36,7 +36,10 @@ h1#name {
 
 /* Responsive */
 @media (max-width: 768px) {
+	.introduction {
+		flex-direction: column;
+	}
 	.home #portrait {
-		display: none;
+		width: 60vw;
 	}
 }
