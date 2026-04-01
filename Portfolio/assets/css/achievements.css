@@ -30,7 +30,7 @@
     height: 70vh;
     max-width: 90vw;
     max-height: 700px;
-    min-height: 450px;
+    /* min-height: 450px; */
     padding: 50px;
     gap: 10px;
     border-radius: 20px;
@@ -117,7 +117,7 @@
 }
 
 /* Responsive */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1032px) {
     .achievements .carousel {
         padding-left: calc(50% - 150px);
         padding-right: calc(50% - 150px);
@@ -132,8 +132,14 @@
         width: 80%;
         height: auto;
     }
-        .achievements .carousel .item img.portrait {
+    .achievements .carousel .item img.portrait {
         width: auto;
         height: 60%;
+    }
+}
+
+@media screen and (max-width: 956px) and (orientation: landscape) {
+    .achievements .carousel .item{
+        height: 80vh;
     }
 }

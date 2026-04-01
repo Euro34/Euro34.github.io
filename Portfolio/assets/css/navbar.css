@@ -59,3 +59,8 @@ nav img {
     opacity: 0;
     pointer-events: none;
 }
+
+/* Responsive */
+@media screen and (max-width: 956px) and (orientation: landscape), (max-width: 500px) {
+    /* Hamburger Navbar */
+}

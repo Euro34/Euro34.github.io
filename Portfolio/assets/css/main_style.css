@@ -104,7 +104,7 @@ animation
 /*-------------------------------------
 responsive
 --------------------------------------*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1032px) {
 	:root {
 		--text-xxxl: 4.5rem;
 		--text-xxl: 2.8rem;
@@ -117,7 +117,7 @@ responsive
 	}
 }
 
-@media screen and (max-width: 956px) and (max-height: 600px) {
+@media screen and (max-width: 956px) and (orientation: landscape) {
 	:root {
 		--text-xxxl: 4rem;
 		--text-xxl: 2rem;

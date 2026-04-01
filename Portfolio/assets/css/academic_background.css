@@ -61,7 +61,7 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 1032px) {
 	.academic-background .container img {
 		margin-left: 20px;
 		margin-right: 20px;
@@ -72,7 +72,7 @@
 	}
 }
 
-@media screen and (max-width: 956px) and (max-height: 600px) {
+@media screen and (max-width: 956px) and (orientation: landscape) {
 	.academic-background .container {
 		flex-direction: column !important;
 		padding: 20px

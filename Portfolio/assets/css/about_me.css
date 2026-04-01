@@ -87,10 +87,28 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media screen and (max-width:1280px) {
+    .about-me .container.grid .item {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 25px;
+    }
+}
+
+@media screen and (max-width: 1032px) {
     .about-me .container.grid {
         grid-template-columns: 1fr;
         grid-auto-flow: row;
+    }
+
+    .about-me .container.grid .item {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 70px;
+        border-radius: 30px;
     }
 }
 
