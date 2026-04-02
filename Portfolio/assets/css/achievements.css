@@ -1,5 +1,8 @@
 .achievements {
     align-items: normal;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: 0% 40%;
 }
 
 .achievements .carousel {

@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: 0% 30%;
 }
 
 .about-me .statement {
@@ -27,6 +30,18 @@
     padding: 50px 70px 50px 50px;
 	border-radius: 30px;
 	background-color: var(--secondary-color);
+}
+
+.about-me .container.grid .item.Left {
+    animation: appearLeft linear;
+    animation-timeline: view();
+    animation-range: 0% 40%;
+}
+
+.about-me .container.grid .item.Right {
+    animation: appearRight linear;
+    animation-timeline: view();
+    animation-range: 0% 40%;
 }
 
 .about-me ul {
@@ -95,9 +110,18 @@
         grid-auto-flow: row;
     }
 
-    .about-me .container.grid .item {
+    .about-me .container.grid .item.Left, .about-me .container.grid .item.Right {
         padding: 50px 70px 50px 50px;
         border-radius: 30px;
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: 0% 40%;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .about-me {
+        animation-range: 0% 15%;
     }
 }
 

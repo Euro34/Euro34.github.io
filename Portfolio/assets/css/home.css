@@ -2,6 +2,7 @@
 	justify-content: center;
 	align-items: center;
 	font-size: var(--text-m);
+	padding-top: 0px;
 }
 
 .introduction {
@@ -9,8 +10,9 @@
 	justify-content: center;
 	align-items: center;
 	height: clamp(auto, 70vh, 1000px);
-	margin-top: clamp(20px, 8vh, 500px);
+	margin-top: clamp(20px, 15vh, 500px);
 	margin-bottom: clamp(20px, 20vh, 500px);
+	animation: floatUp 1.5s ease forwards;
 	gap: 10vw;
 }
 
@@ -35,10 +37,16 @@ h1#name {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media screen and (max-width: 956px) and (orientation: landscape) {
+	.introduction {
+		margin-top: -10px;
+	}
+
+}
+
+@media screen and (max-width: 500px) {
 	.introduction {
 		flex-direction: column;
-		margin-top: clamp(10px, 1vh, 500px);
 	}
 	.home #portrait {
 		width: 65vw;

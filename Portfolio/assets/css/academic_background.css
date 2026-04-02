@@ -3,6 +3,9 @@
 	flex-direction: column;
 	align-items: center;
 	padding-bottom: 100px;
+	animation: appear linear;
+    animation-timeline: view();
+    animation-range: 0% 20%;
 	gap: 50px;
 }
 .academic-background .container {
@@ -14,6 +17,9 @@
 	padding:50px;
 	border-radius: 30px;
 	background-color: var(--secondary-color);
+	animation: appear linear;
+    animation-timeline: view();
+    animation-range: 0% 30%;
 	gap: 50px;
 }
 
@@ -81,17 +87,8 @@
 	}
 }
 
-@media screen and (max-width: 500px) {
-	.academic-background .container {
-		flex-direction: column !important;
-		padding: 20px
-	}
-
-	.academic-background .container .item {
-		max-width: none;
-	}
-
-	.academic-background .stack img {
-		left: -25px;
+@media screen and (max-height: 500px) and (orientation: landscape) {
+	.academic-background {
+		animation-range: 0% 15%;
 	}
 }
