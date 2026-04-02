@@ -95,7 +95,7 @@ nav img {
     }
 }
 
-@media screen and (max-width: 960px) and (orientation: landscape), (max-width: 500px) {
+@media screen and (max-width: 960px) and (orientation: landscape), (max-width: 800px) {
     .navbar {
         justify-content: flex-start;
     }
@@ -131,8 +131,12 @@ nav img {
 
     nav .container .nav-links.open {
         display: flex;
-        opacity: 1;
         animation: menuItemIn 0.35s ease forwards;
+    }
+
+     nav .container .nav-links.closing {
+        display: flex;
+        animation: menuItemOut 0.35s ease forwards;
     }
 
     .nav-links a {
@@ -158,22 +162,23 @@ nav img {
 /* Transition */
 @keyframes menuItemIn {
     from {
-        transform: translateY(-50px);
-        height: 0px;
+        height: 0;
     }
     to {
-        transform: translateY(0);
-        height: 50px !important;
+        height: 250px;
     }
 }
 
 @keyframes menuItemOut {
     from {
+        height: 250px;
         opacity: 1;
-        transform: translateY(0);
+    }
+    75% {
+        opacity: 0;
     }
     to {
+        height: 0;
         opacity: 0;
-        transform: translateY(-50px);
     }
 }

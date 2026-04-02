@@ -22,7 +22,7 @@ links.forEach(link => {
         moveBubbleTo(id);
 
         observerLocked = true;
-        setTimeout(() => { observerLocked = false; }, 300);
+        setTimeout(() => { observerLocked = false; }, 200);
     });
 });
 
@@ -31,13 +31,8 @@ const sections = Array.from(document.querySelectorAll('section')).filter(el => e
 
 let lastScrollY = window.scrollY;
 
-function isAtBottom() {
-    return window.innerHeight + window.scrollY >= document.body.scrollHeight - 50;
-}
-
-function isAtTop() {
-    return window.scrollY <= 50;
-}
+function isAtBottom() {return window.innerHeight + window.scrollY >= document.body.scrollHeight - 50;}
+function isAtTop() {return window.scrollY <= 50;}
 
 const NavBarObserver = new IntersectionObserver((entries) => {
     if (observerLocked) return;
@@ -85,16 +80,29 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const nav = document.querySelector('nav');
 
+function openMenu() {
+    nav.classList.add('open');
+    hamburger.classList.add('open');
+    navLinks.classList.add('open');
+}
+
+function closeMenu() {
+    nav.classList.remove('open');
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+    navLinks.classList.add('closing');
+
+    setTimeout(() => {navLinks.classList.remove('closing');}, 500);
+}
+
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    navLinks.classList.toggle('open');
-    nav.classList.toggle('open');
+    if (navLinks.classList.contains('open')) {
+        closeMenu();
+    } else {
+        openMenu();
+    }
 });
 
 navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        navLinks.classList.remove('open');
-        nav.classList.remove('open');
-    });
+    link.addEventListener('click', () => closeMenu());
 });
