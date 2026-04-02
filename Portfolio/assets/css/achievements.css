@@ -1,8 +1,42 @@
 .achievements {
+    position: relative;
     align-items: normal;
     animation: appear linear;
     animation-timeline: view();
     animation-range: 0% 40%;
+}
+
+.achievements .arrows {
+    display: none;
+}
+
+.achievements:hover .arrows {
+    position: absolute;
+    top: 50%;
+    right: 30vw;
+    left: 30vw;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.achievements .arrows img {
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(150,150,150,0.5);
+    pointer-events: all;
+    cursor: pointer;
+    filter: invert(blur(30px));
+    backdrop-filter: blur(30px);
+}
+
+#previousChevron {
+    transform: rotate(180deg);
 }
 
 .achievements .carousel {

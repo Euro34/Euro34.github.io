@@ -78,3 +78,22 @@ dotsContainer.addEventListener('touchstart', (e) => {
 dotsContainer.addEventListener('touchmove', (e) => {
     if (isScrubbing) e.preventDefault();
 }, { passive: false });
+
+
+// Arrow logic
+const previousChevron = document.getElementById('previousChevron');
+const nextChevron = document.getElementById('nextChevron');
+
+previousChevron.addEventListener('click', () => {
+    const activeIndex = [...dots].findIndex(dot => dot.classList.contains('active'));
+    items[activeIndex - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    dots.forEach(d => d.classList.remove('active'));
+    dots[activeIndex - 1].classList.add('active');
+});
+
+nextChevron.addEventListener('click', () => {
+    const activeIndex = [...dots].findIndex(dot => dot.classList.contains('active'));
+    items[activeIndex + 1].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    dots.forEach(d => d.classList.remove('active'));
+    dots[activeIndex + 1].classList.add('active');
+});
