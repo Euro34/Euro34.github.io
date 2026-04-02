@@ -64,6 +64,18 @@
         gap: 20px;
     }
 
+    .feature-work .item .text h3 {
+        order: 1;
+    }
+
+    .feature-work .item .text p {
+        order: 3;
+    }
+
+    .feature-work .item .text a {
+        order: 2;
+    }
+
     .feature-work .item img {
         width: 100%;
         height: auto;
