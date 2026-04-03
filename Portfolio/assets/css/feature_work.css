@@ -84,6 +84,6 @@
 
 @media screen and (max-height: 500px) {
     .feature-work {
-        animation-range: 0% 10%;
+        animation-range: 0% 40%;
     }
 }

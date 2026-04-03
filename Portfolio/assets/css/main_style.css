@@ -4,12 +4,12 @@ Color Palette
 :root {
 	--text-color: #d3d3d3;
 	--navbartext-color:#e4e4e4;
-	--accent1-color: #9fd3c7;
-	--accent2-color: #86b3cf;
-	--primary-color: #385170;
-	--secondary-color: #283443;
-	--primary-background-color: #141f29;
-	--secondary-background-color: #142536;
+	--accent1-color:  #5baa61;
+	--accent2-color: #5a9e72;
+	--primary-color: #465346;
+	--secondary-color: #2f3d2f;
+	--primary-background-color: #161e17;
+	--secondary-background-color: #1f2820;
 
 	--text-xxxl: 5rem;
 	--text-xxl: 3rem;

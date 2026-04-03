@@ -178,6 +178,12 @@
     }
 }
 
+@media screen and (max-width: 1032px) {
+    .achievements .arrows {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 956px) and (orientation: landscape) {
     .achievements .carousel .item{
         height: 80vh;
