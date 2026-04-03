@@ -10,28 +10,34 @@
     display: none;
 }
 
-.achievements:hover .arrows {
+.achievements .arrows {
     position: absolute;
     top: 50%;
-    right: 30vw;
-    left: 30vw;
+    right: calc(50vw - 343px);
+    left: calc(50vw - 343px);
     z-index: 10;
     display: flex;
     justify-content: space-between;
     padding: 0 16px;
     pointer-events: none;
+    opacity: 0;
     transform: translateY(-50%);
+    transition: opacity 0.3s ease;
+}
+
+.achievements:hover .arrows {
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .achievements .arrows img {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     padding: 8px;
     border-radius: 50%;
     background: rgba(150,150,150,0.5);
     pointer-events: all;
     cursor: pointer;
-    filter: invert(blur(30px));
     backdrop-filter: blur(30px);
 }
 
@@ -149,6 +155,11 @@
 
 /* Responsive */
 @media screen and (max-width: 1032px) {
+    .achievements .arrows {
+        right: calc(50vw - 293px) !important;
+        left: calc(50vw - 293px) !important;
+    }
+
     .achievements .carousel {
         padding: 0px calc(50% - 150px);
     }
@@ -156,7 +167,6 @@
         width: 400px;
         height: 400px;
         padding: 10px;
-        
     }
     .achievements .carousel .item img {
         width: 80%;
