@@ -14,7 +14,9 @@ items.forEach((_, i) => {
 const dots = dotsContainer.querySelectorAll('.dot');
 
 // IntersectionObserver to sync dots while scrolling normally
+carouselObserverLocked = false;
 const carouselObserver = new IntersectionObserver((entries) => {
+    if (carouselObserverLocked) return;
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             const index = [...items].indexOf(entry.target);
@@ -89,6 +91,9 @@ previousChevron.addEventListener('click', () => {
     items[activeIndex - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     dots.forEach(d => d.classList.remove('active'));
     dots[activeIndex - 1].classList.add('active');
+
+    carouselObserverLocked = true;
+    setTimeout(() => { carouselObserverLocked = false; }, 400);
 });
 
 nextChevron.addEventListener('click', () => {
@@ -96,4 +101,7 @@ nextChevron.addEventListener('click', () => {
     items[activeIndex + 1].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     dots.forEach(d => d.classList.remove('active'));
     dots[activeIndex + 1].classList.add('active');
+
+    carouselObserverLocked = true;
+    setTimeout(() => { carouselObserverLocked = false; }, 400);
 });
