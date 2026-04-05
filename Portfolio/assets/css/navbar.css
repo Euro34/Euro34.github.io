@@ -2,10 +2,9 @@
     position: sticky;
     top: 20px;
     z-index: 100;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     animation: floatDown 1.5s ease forwards;
 }
 
