@@ -13,20 +13,37 @@ items.forEach((_, i) => {
 
 const dots = dotsContainer.querySelectorAll('.dot');
 
-// IntersectionObserver to sync dots while scrolling normally
+// Sync dots while scrolling normally
 carouselObserverLocked = false;
-const carouselObserver = new IntersectionObserver((entries) => {
-    if (carouselObserverLocked) return;
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const index = [...items].indexOf(entry.target);
-            dots.forEach(d => d.classList.remove('active'));
-            dots[index].classList.add('active');
-        }
-    });
-}, {
-    root: carousel,
-    threshold: 0.6
+const carouselObserver = new IntersectionObserver(() => {});
+
+function updateActiveDotFromScroll() {
+	if (carouselObserverLocked) return;
+
+	const rect = carousel.getBoundingClientRect();
+	const center = rect.left + rect.width / 2;
+
+	let closestIndex = 0;
+	let closestDist = Infinity;
+
+	items.forEach((item, i) => {
+		const itemRect = item.getBoundingClientRect();
+		const itemCenter = itemRect.left + itemRect.width / 2;
+		const dist = Math.abs(itemCenter - center);
+		if (dist < closestDist) {
+			closestDist = dist;
+			closestIndex = i;
+		}
+	});
+
+	dots.forEach(d => d.classList.remove('active'));
+	dots[closestIndex].classList.add('active');
+}
+
+let scrollRAF;
+carousel.addEventListener('scroll', () => {
+	if (scrollRAF) cancelAnimationFrame(scrollRAF);
+	scrollRAF = requestAnimationFrame(updateActiveDotFromScroll);
 });
 
 items.forEach(item => carouselObserver.observe(item));
