@@ -13,8 +13,8 @@
 .achievements .arrows {
     position: absolute;
     top: 50%;
-    right: calc(50vw - 343px);
-    left: calc(50vw - 343px);
+    right: calc(50vw - 336px);
+    left: calc(50vw - 336px);
     z-index: 10;
     display: flex;
     justify-content: space-between;
@@ -74,7 +74,7 @@
     border-radius: 20px;
     background-color: var(--secondary-color);
     scroll-snap-align: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .achievements .carousel .item img {
