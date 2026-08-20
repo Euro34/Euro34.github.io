@@ -9,7 +9,7 @@ This repo hosts multiple unrelated demos/tests, organized by folder.
 | Path | Live link | Description | Status |
 |------|-----------|-------------|--------|
 | `/Portfolio` | [link](https://username.github.io/Portfolio) | Portfolio | active |
-| `/MWIT-NFC` | [link](https://username.github.io/MWIT-NFC) | Landing page linked from NFC farewell gifts | done |
+| `/MWIT-NFC` | - | Landing page linked from NFC farewell gifts | done |
 
 ## Stack
 
