@@ -56,19 +56,19 @@
 }
 
 .about-me .skills-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 30px;
+    padding-top: 20px;
 }
 
-.about-me .skills-list li {
+.about-me .skill-confidence {
     display: flex;
     align-items: center;
-    gap: 12px;
 }
 
 .about-me .skill-label {
-    width: 140px;
+    width: 110px;
     font-size: var(--text-xs);
 }
 
